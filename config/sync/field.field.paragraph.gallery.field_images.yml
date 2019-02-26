@@ -1,0 +1,28 @@
+uuid: 71f83875-efdb-4057-942f-47e959b1e2f2
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_images
+    - media.type.image
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_images
+field_name: field_images
+entity_type: paragraph
+bundle: gallery
+label: 'Зображення (галерея)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

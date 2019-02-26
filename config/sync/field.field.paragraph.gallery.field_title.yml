@@ -1,0 +1,19 @@
+uuid: 92c5f42d-8e35-4c3b-8bcc-9b9da49f9308
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: gallery
+label: Загаловок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

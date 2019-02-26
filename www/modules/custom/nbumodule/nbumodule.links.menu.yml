@@ -1,0 +1,6 @@
+nbumodule.link:
+  title: 'Курс валют - сьогодні'
+  description: 'Курс валют НБУ сьогодні'
+  menu_name: main
+  route_name: nbumodule.routing
+  weight: 100

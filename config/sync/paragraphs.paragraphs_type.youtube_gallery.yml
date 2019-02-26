@@ -1,0 +1,11 @@
+uuid: fbd21bb3-9ea7-42b1-9572-9b8a92ffc565
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'file:file:0bb6b126-ee3f-408c-9236-3169a9e517b3'
+id: youtube_gallery
+label: 'Відеогалерея YouTube'
+icon_uuid: 0bb6b126-ee3f-408c-9236-3169a9e517b3
+description: 'Галерея відео з YouTube'
+behavior_plugins: {  }

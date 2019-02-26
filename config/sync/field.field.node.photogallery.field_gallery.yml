@@ -1,0 +1,46 @@
+uuid: 72ca6fef-8bfa-4253-b24e-adc1030ef57c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery
+    - node.type.photogallery
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - entity_reference_revisions
+id: node.photogallery.field_gallery
+field_name: field_gallery
+entity_type: node
+bundle: photogallery
+label: Галерея
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      gallery: gallery
+    target_bundles_drag_drop:
+      gallery:
+        enabled: true
+        weight: 7
+      image:
+        weight: 8
+        enabled: false
+      image_and_text:
+        weight: 9
+        enabled: false
+      text:
+        weight: 10
+        enabled: false
+      youtube:
+        weight: 11
+        enabled: false
+      youtube_gallery:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

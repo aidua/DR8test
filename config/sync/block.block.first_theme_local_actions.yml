@@ -1,0 +1,20 @@
+uuid: 75f3cf54-aff3-4827-8385-017890b699a3
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - first_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: first_theme_local_actions
+theme: first_theme
+region: content
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Основні адміністративні дії'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: d36f6e23-9823-40a9-bd2f-e4af2d753a4c
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'file:file:05363a77-b5ab-4b86-8789-566e7e156596'
+id: youtube
+label: 'Відео YouTube'
+icon_uuid: 05363a77-b5ab-4b86-8789-566e7e156596
+description: 'Відео з YouTube'
+behavior_plugins: {  }

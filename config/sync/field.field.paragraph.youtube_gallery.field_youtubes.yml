@@ -1,0 +1,28 @@
+uuid: 4534739f-ccfc-4bf6-8aa8-06fbd3d10f5d
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_youtubes
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.youtube_gallery
+id: paragraph.youtube_gallery.field_youtubes
+field_name: field_youtubes
+entity_type: paragraph
+bundle: youtube_gallery
+label: 'Відеогалерея YouTube'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

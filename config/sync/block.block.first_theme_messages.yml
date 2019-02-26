@@ -1,0 +1,22 @@
+uuid: 499b981a-f04b-44d2-8d55-42a7e1daa0ac
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - first_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: first_theme_messages
+theme: first_theme
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

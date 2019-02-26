@@ -1,0 +1,11 @@
+uuid: ebf4dc2a-189f-4ec3-aec3-966ad3aa053c
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'file:file:a8c2b4b6-d229-44be-a966-658dc90372d0'
+id: text
+label: Текст
+icon_uuid: a8c2b4b6-d229-44be-a966-658dc90372d0
+description: 'Текстовий параграф'
+behavior_plugins: {  }

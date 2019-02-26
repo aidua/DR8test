@@ -1,0 +1,6 @@
+hellomodule.link:
+  title: 'My Hello Module'
+  description: 'Example Hello Link'
+  menu_name: main
+  route_name: hellomodule.routing
+  weight: 100

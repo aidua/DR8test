@@ -1,0 +1,18 @@
+uuid: 6c381f5c-6c7d-4315-993c-111bb967614d
+langcode: uk
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Відео
+type: video
+description: 'Новина на базі відеоролика.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

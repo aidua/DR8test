@@ -1,0 +1,21 @@
+uuid: 3e164bcc-9562-49a9-b8a8-bd630ee6a773
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_title
+    - node.type.photogallery
+  module:
+    - metatag
+id: node.photogallery.field_meta_title
+field_name: field_meta_title
+entity_type: node
+bundle: photogallery
+label: Тайтл
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

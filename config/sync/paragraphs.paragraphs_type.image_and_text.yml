@@ -1,0 +1,11 @@
+uuid: 6d333761-9e25-43a2-90f9-67d6c478868e
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'file:file:fb592008-5603-42fb-8e62-a52ceac13b01'
+id: image_and_text
+label: 'Зображення і текст'
+icon_uuid: fb592008-5603-42fb-8e62-a52ceac13b01
+description: 'Зображення з текстом збоку'
+behavior_plugins: {  }

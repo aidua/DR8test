@@ -1,0 +1,15 @@
+name: First Theme
+type: theme
+description: 'First Drupal 8 Theme'
+core: 8.x
+#base theme: bartik
+
+libraries:
+  - first_theme/bootstrap
+  - first_theme/custom
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  left_sidebar: 'Left sidebar'
+  footer: 'Footer'

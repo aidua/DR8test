@@ -1,0 +1,10 @@
+uuid: 96d9584e-d4e3-4944-9cdb-08e55c3415ed
+langcode: uk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sapEi2YDGoI9yQIT_WgIV2vUdQ6DScH0V3fAyTadAL0
+id: admin
+label: Адміністрування
+description: 'Посилання адміністративних завдань'
+locked: true

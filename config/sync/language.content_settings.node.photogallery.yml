@@ -1,0 +1,11 @@
+uuid: 227bdb2c-f265-4d8a-aa51-359587b4c59a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.photogallery
+id: node.photogallery
+target_entity_type_id: node
+target_bundle: photogallery
+default_langcode: site_default
+language_alterable: false

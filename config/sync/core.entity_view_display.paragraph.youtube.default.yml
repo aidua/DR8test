@@ -1,0 +1,21 @@
+uuid: 5e6bc256-d471-42f8-b0ba-e0cca5ce35cf
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.youtube.field_title
+    - paragraphs.paragraphs_type.youtube
+id: paragraph.youtube.default
+targetEntityType: paragraph
+bundle: youtube
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

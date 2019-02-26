@@ -1,0 +1,21 @@
+uuid: 3f6b6561-7431-4d29-baec-8b519551695b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_title
+    - node.type.page
+  module:
+    - metatag
+id: node.page.field_meta_title
+field_name: field_meta_title
+entity_type: node
+bundle: page
+label: meta_title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

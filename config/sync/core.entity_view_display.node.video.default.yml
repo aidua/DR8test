@@ -1,0 +1,67 @@
+uuid: 97ab7e2b-88a6-4df0-8a21-9775a3ebcb0b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.video.body
+    - field.field.node.video.field_image
+    - field.field.node.video.field_meta_title
+    - field.field.node.video.field_paragraphs
+    - field.field.node.video.field_tags
+    - node.type.video
+  module:
+    - entity_reference_revisions
+    - metatag
+    - text
+    - user
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_title:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_paragraphs:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tags:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

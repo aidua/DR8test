@@ -1,0 +1,22 @@
+uuid: 0fc14666-17ee-48d0-a63b-5aa5280cfcf0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.video
+  module:
+    - text
+id: node.video.body
+field_name: body
+entity_type: node
+bundle: video
+label: Анонс
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

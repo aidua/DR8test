@@ -1,0 +1,28 @@
+uuid: 90cc5d3b-c48b-4169-847f-f42cc2c11cf1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.photogallery
+id: node.photogallery.field_image
+field_name: field_image
+entity_type: node
+bundle: photogallery
+label: Промо-фото
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

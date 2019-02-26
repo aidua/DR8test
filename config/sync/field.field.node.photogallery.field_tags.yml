@@ -1,0 +1,21 @@
+uuid: f3ce3aee-c96a-4fa5-937e-9c3e037d2d7b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.photogallery
+id: node.photogallery.field_tags
+field_name: field_tags
+entity_type: node
+bundle: photogallery
+label: Теги
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

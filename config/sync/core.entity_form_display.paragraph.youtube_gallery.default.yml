@@ -1,0 +1,26 @@
+uuid: d501067d-4369-462e-8c1d-74c7642e51e1
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.youtube_gallery.field_title
+    - field.field.paragraph.youtube_gallery.field_youtubes
+    - paragraphs.paragraphs_type.youtube_gallery
+  module:
+    - media_library
+id: paragraph.youtube_gallery.default
+targetEntityType: paragraph
+bundle: youtube_gallery
+mode: default
+content:
+  field_youtubes:
+    type: media_library_widget
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_title: true
+  status: true
+  uid: true

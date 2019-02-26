@@ -1,0 +1,15 @@
+<div class="col-md-10 col-md-offset-1 col-xs-12 currencytbl">
+    <div class="row">
+    {% if data %}
+        {% for currency in data %}
+            <div class="col-md-4 text-center currency">
+                <a href="/currencies/{{ currency.kod2 }}" class="" title="{{ currency.name }}">
+                    <img src="/{{ base_path ~ directory }}/images/{{ currency.kod2 }}.png" width="90%" alt="Детальний курс {{ currency.kod2 }}" />
+                    <b>{{ currency.kod2 }}</b><br> {{ currency.name }}
+                </a><br>
+            </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+    {{ kint() }}
+</div>

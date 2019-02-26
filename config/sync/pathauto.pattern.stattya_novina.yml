@@ -1,0 +1,22 @@
+uuid: afae8c0f-5c78-484d-bdee-9a2194cd35d1
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: stattya_novina
+label: Стаття/Новина
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  4fc559ec-9cc7-43f4-9734-51721683a7bc:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4fc559ec-9cc7-43f4-9734-51721683a7bc
+selection_logic: and
+weight: -5
+relationships: {  }

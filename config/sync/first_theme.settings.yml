@@ -1,0 +1,14 @@
+my_text: 'Good day, test text_'
+_core:
+  default_config_hash: 1II4AARI4ajHoaXaaID8ZgG9gKDzocu9uY9GNVXPOys
+langcode: uk
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: themes/custom/first_theme/logo.png
+favicon:
+  use_default: 1

@@ -1,0 +1,17 @@
+services:
+  # Назва сервісу.
+  curmodule.db_logic:
+    # Клас, який повертає сервіс.
+    # Оскільки в Drupal 8 використовується автозавантажувач PSR-4, то src пропускаємо.
+    class: Drupal\curmodule\CurmoduleDbLogic
+    # Аргументи, які прилетять в в конструктор класу.
+    arguments: ['@database']
+    # Детальніше пояснення: https://www.drupal.org/node/2239393.
+    tags:
+      - { name: backend_overridable }
+
+  # Назва сервісу.
+  curmodule.path_processor:
+    class: Drupal\curmodule\PathProcessor\CurmodulePathProcessor
+    tags:
+      - { name: path_processor_inbound, priority: 250 }

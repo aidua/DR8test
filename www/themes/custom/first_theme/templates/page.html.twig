@@ -1,0 +1,24 @@
+<div class="container maincontainer">
+    <div class="row">
+        <div class="col-md-12 header">
+            {{ page.header }}
+        </div>
+    </div>
+    <div class="row">
+        {% block content %}
+            {% if page.left_sidebar %}
+                <div class="col-md-3 left-sidebar">
+                    {{ page.left_sidebar }}
+                </div>
+            {% endif %}
+            <div class="col-md-{{ page.left_sidebar ? '9' : '12' }} content">
+                {{ page.content }}
+            </div>
+        {% endblock %}
+    </div>
+    <div class="row">
+        <div class="col-md-12 footer">
+            {{ page.footer }}
+        </div>
+    </div>
+</div>

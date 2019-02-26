@@ -1,0 +1,11 @@
+uuid: 8bce4374-291f-4cb6-b17a-62b51e9fd438
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'file:file:a0b269fc-b744-4e44-9c93-a9ea080d4180'
+id: gallery
+label: Галерея
+icon_uuid: a0b269fc-b744-4e44-9c93-a9ea080d4180
+description: 'Галерея зображень'
+behavior_plugins: {  }

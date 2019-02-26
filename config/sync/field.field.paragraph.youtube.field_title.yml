@@ -1,0 +1,19 @@
+uuid: 79adfea9-592e-414a-bda4-c45f9107cc4c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.youtube
+id: paragraph.youtube.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: youtube
+label: Загаловок
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

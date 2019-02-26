@@ -1,0 +1,22 @@
+uuid: 5145a808-6ce6-478a-b8ac-e3b376e3a77c
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - first_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: first_theme_content
+theme: first_theme
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Основний вміст сторінки'
+  provider: system
+  label_display: '0'
+visibility: {  }

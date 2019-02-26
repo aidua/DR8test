@@ -1,0 +1,20 @@
+<?php
+
+function first_theme_preprocess_page(&$vars) {
+    $vars['my_name'] = 'AID';
+    $vars['my_text'] = theme_get_setting('my_text');
+    $vars['attributes']['class'][] = 'wm-test';
+
+}
+
+function first_theme_theme() {
+    return [
+        'menu__main' => [
+            'variables' => [
+                'items' => null
+            ],
+            'template' => 'my-menu'
+        ]
+    ];
+}
+

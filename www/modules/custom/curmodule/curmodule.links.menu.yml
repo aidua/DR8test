@@ -1,0 +1,6 @@
+curmodule.link:
+  title: 'Динаміка змін курсів валют'
+  description: 'Дані по курсах валют за остранній час'
+  menu_name: main
+  route_name: curmodule.routing
+  weight: 110

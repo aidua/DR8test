@@ -1,0 +1,25 @@
+uuid: fc10ba2d-d631-43b9-8755-ab87b6ddc8dd
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - first_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: first_theme_branding
+theme: first_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендування сайту'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

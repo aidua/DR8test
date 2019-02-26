@@ -1,0 +1,14 @@
+uuid: 976d0c92-e35d-4b35-994a-df7f98145237
+name: drupal8.ua
+mail: office@drupal8.ua
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: uk
+default_langcode: uk
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

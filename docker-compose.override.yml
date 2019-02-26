@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mariadb:
+    volumes:
+#      - container-volume:/var/lib/mysql
+      - ./db_data/drupal8_ua.sql:/docker-entrypoint-initdb.d/drupal8_ua.sql
+#      - ./db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  php:
+    volumes:
+      - ./www:/var/www/html
+  nginx:
+    volumes:
+      - ./www:/var/www/html

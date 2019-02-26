@@ -1,0 +1,27 @@
+# В першу чегру оголошується машинне імя роута. Воно складається з:
+# назва_модуля.машинна_назва_роута.
+curmodule.routing:
+  # Вказуємо шлях роута, з лідируючим слешом.
+  path: '/currencies'
+  # Значення по замовчуванню
+  defaults:
+    # Функція контролера, що відповідає за вміст.
+    _controller: '\Drupal\curmodule\Controller\CurModuleController::firstCurModule'
+    # В даному разділі вказуються необхідні вимоги до роута.
+  requirements:
+    # Будемо показувати сторінку тільки тим, хто має на перегляд вмісту.
+    _permission: 'access content'
+    _access: 'TRUE'
+
+curmodule.pages_routing:
+  # Вказуємо шлях роута, з лідируючим слешом.
+  path: '/currencies/{pages_name}'
+  # Значення по замовчуванню
+  defaults:
+    # Функція контролера, що відповідає за вміст.
+    _controller: '\Drupal\curmodule\Controller\CurModuleController::pagesCurModule'
+    # В даному разділі вказуються необхідні вимоги до роута.
+  requirements:
+    # Будемо показувати сторінку тільки тим, хто має на перегляд вмісту.
+    _permission: 'access content'
+    _access: 'TRUE'

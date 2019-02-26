@@ -1,0 +1,20 @@
+uuid: a4fbccb1-ac4f-47ab-819e-f898cea5132c
+langcode: uk
+status: true
+dependencies:
+  theme:
+    - first_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: first_theme_page_title
+theme: first_theme
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Заголовок сторінки'
+  provider: core
+  label_display: '0'
+visibility: {  }

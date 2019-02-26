@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function hellomodule_theme() {
+    return [
+        'hellomodule_template' => [  // Назва теми
+            'variables' => [ // Масив назви змінних
+                'data' => NULL,
+            ],
+            'template' => 'hellomodule_template', // Шлях до шаблону без .html.twig, в якому і будуть доступні змінні, що вказані вище
+        ],
+    ];
+}

@@ -1,0 +1,26 @@
+uuid: 0b3fb891-5b72-405b-ac14-5c946d3d1463
+langcode: uk
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - first_theme
+_core:
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
+id: first_theme_main_menu
+theme: first_theme
+region: left_sidebar
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Основна навіґація'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

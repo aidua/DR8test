@@ -1,0 +1,10 @@
+canvasjs:
+  version: 2.3
+  js:
+    js/canvasjs.min.js: {}
+  dependencies:
+    - core/drupalSettings
+custom:
+  js:
+    js/curmodule_scripts.js: {}
+

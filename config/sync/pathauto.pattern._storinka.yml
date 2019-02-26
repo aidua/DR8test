@@ -1,0 +1,22 @@
+uuid: b3463173-513d-4ab8-b89f-80276d06ce05
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: _storinka
+label: ' Сторінка'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  37b0bf4c-464e-491d-a6df-21de8e3b38bb:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 37b0bf4c-464e-491d-a6df-21de8e3b38bb
+selection_logic: and
+weight: -5
+relationships: {  }

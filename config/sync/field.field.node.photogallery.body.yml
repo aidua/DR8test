@@ -1,0 +1,22 @@
+uuid: 8987a0a0-7aae-4034-ba27-c952b22bf421
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.photogallery
+  module:
+    - text
+id: node.photogallery.body
+field_name: body
+entity_type: node
+bundle: photogallery
+label: Анонс
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

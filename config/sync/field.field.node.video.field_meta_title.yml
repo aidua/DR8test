@@ -1,0 +1,21 @@
+uuid: 92aa0283-8821-42a9-89d4-f1218f51adce
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_title
+    - node.type.video
+  module:
+    - metatag
+id: node.video.field_meta_title
+field_name: field_meta_title
+entity_type: node
+bundle: video
+label: Тайтл
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

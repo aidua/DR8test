@@ -1,0 +1,11 @@
+uuid: 8bfbab18-a17e-45dd-aefe-8e7736b01554
+langcode: uk
+status: true
+dependencies:
+  content:
+    - 'file:file:61dac15c-17fb-48c7-9f7a-911521fd571d'
+id: image
+label: Зображення
+icon_uuid: 61dac15c-17fb-48c7-9f7a-911521fd571d
+description: 'Параграф з зображенням'
+behavior_plugins: {  }

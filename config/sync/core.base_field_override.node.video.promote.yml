@@ -1,0 +1,22 @@
+uuid: ffdc9850-1c18-494b-ba79-1ffa49579ea3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.video
+id: node.video.promote
+field_name: promote
+entity_type: node
+bundle: video
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

@@ -1,0 +1,8 @@
+uuid: 630de031-4e78-4535-985e-01dc019c0589
+langcode: uk
+status: true
+dependencies: {  }
+id: T43qaxwUQWS5cOCpwG2tGLGOF5UzykA0K-mCFL6oRhs
+label: 'http://drupal8.ua/'
+context:
+  language: uk

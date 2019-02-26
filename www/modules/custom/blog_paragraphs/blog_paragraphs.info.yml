@@ -1,0 +1,7 @@
+name: BLOG - Paragraphs
+type: module
+description: Custom module for extending paragraphs.
+package: Custom
+core: 8.x
+dependencies:
+  - paragraphs:paragraphs
