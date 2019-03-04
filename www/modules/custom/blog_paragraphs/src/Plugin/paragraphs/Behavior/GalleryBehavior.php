@@ -9,6 +9,7 @@
 
 namespace Drupal\blog_paragraphs\Plugin\paragraphs\Behavior;
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Annotation\Translation;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -58,7 +59,11 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
      */
     public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode)
     {
-        // TODO: Implement view() method.
+        //ksm($build, $paragraph, $display, $view_mode);
+        $images_per_row = $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3);
+        $bem_block = 'paragraph-'.$paragraph->bundle().($view_mode=='default'? '':'-'.$view_mode).'--images-per-row-'.$images_per_row;
+        $build['#attributes']['class'][] = Html::getClass($bem_block);
+        ksm($images_per_row);
     }
 
     /**
@@ -75,6 +80,7 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
                 '3' => $this->formatPlural(3,'1 image per row','@count images per row'),
                 '4' => $this->formatPlural(4,'1 image per row','@count images per row'),
             ],
+            '#default_value' => $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3),
         ];
 
         return $form;

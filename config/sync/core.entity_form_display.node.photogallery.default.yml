@@ -11,6 +11,7 @@ dependencies:
     - node.type.photogallery
   module:
     - field_group
+    - media_library
     - metatag
     - paragraphs
     - path
@@ -81,7 +82,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_gallery:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 14
     settings:
       title: Paragraph
@@ -90,16 +91,19 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_image:
     weight: 14
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_meta_title:
     weight: 2

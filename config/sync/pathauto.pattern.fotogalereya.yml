@@ -1,0 +1,22 @@
+uuid: 3dee69e8-9a73-4b7a-a957-8b7662d1b585
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: fotogalereya
+label: Фотогалерея
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  381d6a52-d260-476c-8069-d027d570948d:
+    id: node_type
+    bundles:
+      photogallery: photogallery
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 381d6a52-d260-476c-8069-d027d570948d
+selection_logic: and
+weight: -5
+relationships: {  }
