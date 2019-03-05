@@ -5,7 +5,9 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^1.0.24",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "drupal/photoswipe": "^2.6",
+        "bower-asset/photoswipe": "^4.1"
     },
     "replace": {
         "drupal/core": "^8.6"
@@ -61,6 +63,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ]
 }

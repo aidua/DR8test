@@ -4,8 +4,12 @@ status: true
 dependencies:
   content:
     - 'file:file:fb592008-5603-42fb-8e62-a52ceac13b01'
+  module:
+    - blog_paragraphs
 id: image_and_text
 label: 'Зображення і текст'
 icon_uuid: fb592008-5603-42fb-8e62-a52ceac13b01
 description: 'Зображення з текстом збоку'
-behavior_plugins: {  }
+behavior_plugins:
+  blog_paragraphs_image_and_text:
+    enabled: true
