@@ -63,7 +63,6 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
         $images_per_row = $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3);
         $bem_block = 'paragraph-'.$paragraph->bundle().($view_mode=='default'? '':'-'.$view_mode).'--images-per-row-'.$images_per_row;
         $build['#attributes']['class'][] = Html::getClass($bem_block);
-        ksm($images_per_row);
     }
 
     /**
