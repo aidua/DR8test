@@ -3,9 +3,17 @@ langcode: uk
 status: true
 dependencies:
   content:
-    - 'file:file:a8c2b4b6-d229-44be-a966-658dc90372d0'
+    - 'file:file:39349201-aa79-4c2d-b2cf-061e8e2a19f1'
+  module:
+    - blog_paragraphs
 id: text
 label: Текст
-icon_uuid: a8c2b4b6-d229-44be-a966-658dc90372d0
+icon_uuid: 39349201-aa79-4c2d-b2cf-061e8e2a19f1
 description: 'Текстовий параграф'
-behavior_plugins: {  }
+behavior_plugins:
+  blog_paragraphs_paragraph_class:
+    enabled: true
+  blog_paragraphs_paragraph_style:
+    enabled: true
+  blog_paragraphs_paragraph_title:
+    enabled: true

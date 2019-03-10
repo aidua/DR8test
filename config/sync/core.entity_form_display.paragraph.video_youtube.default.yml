@@ -1,0 +1,33 @@
+uuid: 24a0e594-7fac-4c24-be82-af56dadcf223
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_youtube.field_title
+    - field.field.paragraph.video_youtube.field_youtube_video
+    - paragraphs.paragraphs_type.video_youtube
+  module:
+    - media_library
+id: paragraph.video_youtube.default
+targetEntityType: paragraph
+bundle: video_youtube
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_youtube_video:
+    type: media_library_widget
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

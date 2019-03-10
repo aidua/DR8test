@@ -22,13 +22,13 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
 
 /**
  * @ParagraphsBehavior (
- *     id = "blog_paragraphs_gallery",
- *     label = @Translation("Settings Gallery."),
- *     description = @Translation("Extended settings Photo Gallery."),
+ *     id = "blog_paragraphs_remote_video_gallery",
+ *     label = @Translation("Remote video gallery Settings."),
+ *     description = @Translation("Extended settings Remote Video Gallery."),
  *     weight = 0,
  * )
  */
-class GalleryBehavior extends ParagraphsBehaviorBase {
+class RemoteVideoGalleryBehavior extends ParagraphsBehaviorBase {
 
     /**
      * {@inheritdoc}
@@ -36,7 +36,7 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
     public static function isApplicable(ParagraphsType $paragraphs_type)
     {
         //return parent::isApplicable($paragraphs_type);
-        return $paragraphs_type->id() == "gallery";
+        return $paragraphs_type->id() == "youtube_gallery";
     }
 
     /**
@@ -45,9 +45,9 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
     public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode)
     {
         //ksm($build, $paragraph, $display, $view_mode);
-        $images_per_row = $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3);
+        $videos_per_row = $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3);
         $bem_block = 'paragraph-'.$paragraph->bundle().($view_mode=='default'? '':'-'.$view_mode);
-        $build['#attributes']['class'][] = Html::getClass($bem_block.'--images-per-row-'.$images_per_row);
+        $build['#attributes']['class'][] = Html::getClass($bem_block.'--videos-per-row-'.$videos_per_row);
     }
 
     /**
@@ -58,11 +58,11 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
         //return parent::buildBehaviorForm($paragraph, $form, $form_state);
         $form['items_per_row'] = [
             '#type' => 'select',
-            '#title' => $this->t('Number of images per row.'),
+            '#title' => $this->t('Number of videos per row.'),
             '#options' => [
-                '2' => $this->formatPlural(2,'1 image per row','@count images per row'),
-                '3' => $this->formatPlural(3,'1 image per row','@count images per row'),
-                '4' => $this->formatPlural(4,'1 image per row','@count images per row'),
+                '2' => $this->formatPlural(2,'1 video per row','@count videos per row'),
+                '3' => $this->formatPlural(3,'1 video per row','@count videos per row'),
+                '4' => $this->formatPlural(4,'1 video per row','@count videos per row'),
             ],
             '#default_value' => $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3),
         ];

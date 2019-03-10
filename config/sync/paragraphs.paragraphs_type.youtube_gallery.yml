@@ -3,9 +3,17 @@ langcode: uk
 status: true
 dependencies:
   content:
-    - 'file:file:0bb6b126-ee3f-408c-9236-3169a9e517b3'
+    - 'file:file:3071813f-7d9a-4797-9d65-a3c596669b8a'
+  module:
+    - blog_paragraphs
 id: youtube_gallery
 label: 'Відеогалерея YouTube'
-icon_uuid: 0bb6b126-ee3f-408c-9236-3169a9e517b3
+icon_uuid: 3071813f-7d9a-4797-9d65-a3c596669b8a
 description: 'Галерея відео з YouTube'
-behavior_plugins: {  }
+behavior_plugins:
+  blog_paragraphs_paragraph_class:
+    enabled: true
+  blog_paragraphs_paragraph_style:
+    enabled: true
+  blog_paragraphs_paragraph_title:
+    enabled: true

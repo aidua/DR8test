@@ -3,9 +3,17 @@ langcode: uk
 status: true
 dependencies:
   content:
-    - 'file:file:61dac15c-17fb-48c7-9f7a-911521fd571d'
+    - 'file:file:5b575000-ae91-4824-be28-a560f3f5e9c6'
+  module:
+    - blog_paragraphs
 id: image
 label: Зображення
-icon_uuid: 61dac15c-17fb-48c7-9f7a-911521fd571d
+icon_uuid: 5b575000-ae91-4824-be28-a560f3f5e9c6
 description: 'Параграф з зображенням'
-behavior_plugins: {  }
+behavior_plugins:
+  blog_paragraphs_paragraph_class:
+    enabled: true
+  blog_paragraphs_paragraph_style:
+    enabled: true
+  blog_paragraphs_paragraph_title:
+    enabled: true

@@ -3,13 +3,19 @@ langcode: uk
 status: true
 dependencies:
   content:
-    - 'file:file:fb592008-5603-42fb-8e62-a52ceac13b01'
+    - 'file:file:de052175-7bde-4951-b1b2-81dcc2fac807'
   module:
     - blog_paragraphs
 id: image_and_text
 label: 'Зображення і текст'
-icon_uuid: fb592008-5603-42fb-8e62-a52ceac13b01
+icon_uuid: de052175-7bde-4951-b1b2-81dcc2fac807
 description: 'Зображення з текстом збоку'
 behavior_plugins:
   blog_paragraphs_image_and_text:
+    enabled: true
+  blog_paragraphs_paragraph_class:
+    enabled: true
+  blog_paragraphs_paragraph_style:
+    enabled: true
+  blog_paragraphs_paragraph_title:
     enabled: true

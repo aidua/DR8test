@@ -22,21 +22,20 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
 
 /**
  * @ParagraphsBehavior (
- *     id = "blog_paragraphs_gallery",
- *     label = @Translation("Settings Gallery."),
- *     description = @Translation("Extended settings Photo Gallery."),
+ *     id = "blog_paragraphs_remote_video",
+ *     label = @Translation("Remote video paragraph settings."),
+ *     description = @Translation("Additional settings for remote video."),
  *     weight = 0,
  * )
  */
-class GalleryBehavior extends ParagraphsBehaviorBase {
+class RemoteVideoBehavior extends ParagraphsBehaviorBase {
 
     /**
      * {@inheritdoc}
      */
     public static function isApplicable(ParagraphsType $paragraphs_type)
     {
-        //return parent::isApplicable($paragraphs_type);
-        return $paragraphs_type->id() == "gallery";
+        return $paragraphs_type->id() == "video_youtube";
     }
 
     /**
@@ -44,10 +43,10 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
      */
     public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode)
     {
-        //ksm($build, $paragraph, $display, $view_mode);
-        $images_per_row = $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3);
+        $max_video_width = $paragraph -> getBehaviorSetting($this->getPluginId(),'video_width', 'full');
         $bem_block = 'paragraph-'.$paragraph->bundle().($view_mode=='default'? '':'-'.$view_mode);
-        $build['#attributes']['class'][] = Html::getClass($bem_block.'--images-per-row-'.$images_per_row);
+
+        $build['#attributes']['class'][] = Html::getClass($bem_block. '--video-width-'. $max_video_width);
     }
 
     /**
@@ -55,17 +54,17 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
      */
     public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state)
     {
-        //return parent::buildBehaviorForm($paragraph, $form, $form_state);
-        $form['items_per_row'] = [
+        $form['video_width'] = [
             '#type' => 'select',
-            '#title' => $this->t('Number of images per row.'),
+            '#title' => $this->t('Video block width.'),
+            '#description' => $this->t('Maximum width for video block.'),
             '#options' => [
-                '2' => $this->formatPlural(2,'1 image per row','@count images per row'),
-                '3' => $this->formatPlural(3,'1 image per row','@count images per row'),
-                '4' => $this->formatPlural(4,'1 image per row','@count images per row'),
+                'full' => '100%',
+                '720p' => '720p',
+                '50%' => '50%',
             ],
-            '#default_value' => $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3),
-        ];
+            '#default_value' => $paragraph -> getBehaviorSetting($this->getPluginId(),'video_width', 'full'),
+       ];
 
         return $form;
     }

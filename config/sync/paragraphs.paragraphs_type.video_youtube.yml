@@ -1,12 +1,14 @@
-uuid: d36f6e23-9823-40a9-bd2f-e4af2d753a4c
+uuid: bfeffbfa-25bd-4d6a-b02b-d88919464f58
 langcode: uk
 status: true
 dependencies:
+  content:
+    - 'file:file:54b34186-6479-490e-9f56-39561f9c8d81'
   module:
     - blog_paragraphs
-id: youtube
-label: 'Відео YouTube'
-icon_uuid: null
+id: video_youtube
+label: 'Відео YouTube+'
+icon_uuid: 54b34186-6479-490e-9f56-39561f9c8d81
 description: 'Відео з YouTube'
 behavior_plugins:
   blog_paragraphs_paragraph_class:

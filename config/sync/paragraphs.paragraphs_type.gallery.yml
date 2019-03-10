@@ -3,13 +3,19 @@ langcode: uk
 status: true
 dependencies:
   content:
-    - 'file:file:a0b269fc-b744-4e44-9c93-a9ea080d4180'
+    - 'file:file:879dc047-c2ea-49f6-8a10-fd126e09d23e'
   module:
     - blog_paragraphs
 id: gallery
 label: Галерея
-icon_uuid: a0b269fc-b744-4e44-9c93-a9ea080d4180
+icon_uuid: 879dc047-c2ea-49f6-8a10-fd126e09d23e
 description: 'Галерея зображень'
 behavior_plugins:
   blog_paragraphs_gallery:
+    enabled: true
+  blog_paragraphs_paragraph_class:
+    enabled: true
+  blog_paragraphs_paragraph_style:
+    enabled: true
+  blog_paragraphs_paragraph_title:
     enabled: true
