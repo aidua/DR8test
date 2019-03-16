@@ -1,0 +1,25 @@
+{
+  "name": "first_theme",
+  "version": "1.0.0",
+  "description": "First theme with package file.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@mdi/font": "^3.5.95",
+    "autoprefixer": "^9.5.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-imagemin": "^5.0.3",
+    "normalize.css": "^8.0.1",
+    "lost": "^8.3.1",
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+  },
+  "scripts": {
+	"postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "author": "AID",
+  "license": "ISC"
+}

@@ -1,0 +1,37 @@
+diff --git a/photoswipe.module b/photoswipe.module
+index 1b0bfd8..7bb1b63 100644
+--- a/photoswipe.module
++++ b/photoswipe.module
+@@ -39,6 +39,7 @@ function photoswipe_theme() {
+     'photoswipe_image_formatter' => [
+       'variables' => [
+         'item' => NULL,
++        'entity' => NULL,
+         'display_settings' => [],
+         'delta' => NULL,
+       ],
+diff --git a/photoswipe.theme.inc b/photoswipe.theme.inc
+index 9fa02f9..c9c44b5 100644
+--- a/photoswipe.theme.inc
++++ b/photoswipe.theme.inc
+@@ -25,7 +25,7 @@ function template_preprocess_photoswipe_image_formatter(array &$variables) {
+   if ($item->entity instanceof MediaInterface && $item->entity->hasField($settings['photoswipe_reference_image_field'])) {
+     $item = $item->entity->get($settings['photoswipe_reference_image_field']);
+   }
+-  $entity = $item->getParent()->getValue();
++  $entity = $variables['entity'];
+   $uri = $item->entity->getFileUri();
+   $alt = !empty($item->alt) ? $item->alt : '';
+   $title = !empty($item->title) ? $item->title : '';
+diff --git a/src/Plugin/Field/FieldFormatter/PhotoswipeFieldFormatter.php b/src/Plugin/Field/FieldFormatter/PhotoswipeFieldFormatter.php
+index 815d875..bef6d8d 100644
+--- a/src/Plugin/Field/FieldFormatter/PhotoswipeFieldFormatter.php
++++ b/src/Plugin/Field/FieldFormatter/PhotoswipeFieldFormatter.php
+@@ -249,6 +249,7 @@ class PhotoswipeFieldFormatter extends FormatterBase {
+       $elements[$delta] = [
+         '#theme' => 'photoswipe_image_formatter',
+         '#item' => $item,
++        '#entity' => $items->getEntity(),
+         '#display_settings' => $settings,
+         '#delta' => $delta,
+       ];

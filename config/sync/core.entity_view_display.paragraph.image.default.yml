@@ -3,31 +3,29 @@ langcode: uk
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_media_image
     - field.field.paragraph.image.field_title
     - paragraphs.paragraphs_type.image
   module:
-    - image
+    - photoswipe
 id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
 content:
-  field_image:
-    weight: 1
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_title:
+  field_media_image:
+    type: photoswipe_field_formatter
     weight: 0
     label: above
     settings:
-      link_to_entity: false
+      photoswipe_node_style_first: ''
+      photoswipe_node_style: ''
+      photoswipe_image_style: ''
+      photoswipe_reference_image_field: field_media_image
+      photoswipe_caption: title
+      photoswipe_caption_custom: ''
+      photoswipe_view_mode: default
     third_party_settings: {  }
-    type: string
     region: content
-hidden: {  }
+hidden:
+  field_title: true

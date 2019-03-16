@@ -9,7 +9,8 @@
         "drupal/photoswipe": "^2.6",
         "bower-asset/photoswipe": "^4.1",
         "drupal/antibot": "^1.2",
-        "drupal/tvi": "^1.0@beta"
+        "drupal/tvi": "^1.0@beta",
+        "drush/drush": "^9.5"
     },
     "replace": {
         "drupal/core": "^8.6"
