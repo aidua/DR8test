@@ -1,0 +1,3 @@
+# Ignore directories
+del-bootstrap
+node_modules
