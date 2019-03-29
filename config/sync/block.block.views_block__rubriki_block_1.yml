@@ -1,0 +1,30 @@
+uuid: d59bf3f5-90f2-4307-9672-ad51ff18dab0
+langcode: uk
+status: true
+dependencies:
+  config:
+    - views.view.rubriki
+  module:
+    - system
+    - views
+  theme:
+    - first_theme
+id: views_block__rubriki_block_1
+theme: first_theme
+region: right_sidebar
+weight: -7
+provider: null
+plugin: 'views_block:rubriki-block_1'
+settings:
+  id: 'views_block:rubriki-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

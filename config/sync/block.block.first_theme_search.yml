@@ -1,6 +1,6 @@
 uuid: 201dbf01-2249-4c14-bffd-e47d9a7408de
 langcode: uk
-status: false
+status: true
 dependencies:
   module:
     - search

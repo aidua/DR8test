@@ -1,0 +1,52 @@
+uuid: 85deab14-88b6-46c4-9049-fe5cf81ea11a
+langcode: uk
+status: true
+dependencies:
+  config:
+    - contact.form.zakazati_zvorotniy_dzvinok
+    - field.field.contact_message.zakazati_zvorotniy_dzvinok.field_koli_peredzvoniti_
+    - field.field.contact_message.zakazati_zvorotniy_dzvinok.field_telefon
+  module:
+    - datetime
+    - telephone
+id: contact_message.zakazati_zvorotniy_dzvinok.default
+targetEntityType: contact_message
+bundle: zakazati_zvorotniy_dzvinok
+mode: default
+content:
+  field_koli_peredzvoniti_:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_telefon:
+    weight: 2
+    settings:
+      placeholder: '+38 (09Х) ХХХ-ХХ-ХХ'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  mail: true
+  message: true

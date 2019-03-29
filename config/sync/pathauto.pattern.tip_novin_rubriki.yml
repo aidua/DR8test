@@ -1,0 +1,23 @@
+uuid: 7227d84a-4b58-4685-928a-70211766b550
+langcode: uk
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: tip_novin_rubriki
+label: 'Типи новин (рубрики)'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'rubryky/[term:name]'
+selection_criteria:
+  4f3d2b0c-1964-45b9-957b-1755e22f95a3:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      tip_novini: tip_novini
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 4f3d2b0c-1964-45b9-957b-1755e22f95a3
+selection_logic: and
+weight: -5
+relationships: {  }

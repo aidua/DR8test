@@ -1,0 +1,9 @@
+uuid: 4d7b5436-f5da-4caa-a807-713290144f76
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Працівники компанії'
+vid: pracivniki_kompanii
+description: ''
+hierarchy: 0
+weight: 0

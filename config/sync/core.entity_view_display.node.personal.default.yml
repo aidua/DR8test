@@ -1,0 +1,60 @@
+uuid: 473a7ad3-abb9-4b3c-83af-8ec058aad48b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.field.node.personal.body
+    - field.field.node.personal.field_foto_info
+    - field.field.node.personal.field_posada
+    - field.field.node.personal.field_viddil
+    - node.type.personal
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.personal.default
+targetEntityType: node
+bundle: personal
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_foto_info:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_posada:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_viddil:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  previous_next: true

@@ -1,0 +1,11 @@
+uuid: 884b2388-c26e-4376-9303-6e5bc56bd8c3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tip_novini
+id: taxonomy_term.tip_novini
+target_entity_type_id: taxonomy_term
+target_bundle: tip_novini
+default_langcode: site_default
+language_alterable: false

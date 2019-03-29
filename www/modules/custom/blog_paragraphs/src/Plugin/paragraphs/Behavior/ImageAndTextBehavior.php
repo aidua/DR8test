@@ -51,7 +51,7 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
         $build['#attributes']['class'][] = Html::getClass($bem_block.'--image-position-'.$image_position);
         $build['#attributes']['class'][] = Html::getClass($bem_block.'--image-size-'.$image_size);
 
-        ksm($build);
+        //ksm($build);
         if (isset($build['field_image']) && ($build['field_image']['#formatter'] == 'image')) {
             switch ($image_size) {
                 case '4_12':

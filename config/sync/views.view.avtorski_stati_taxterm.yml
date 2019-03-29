@@ -1,6 +1,6 @@
-uuid: 6c2ca678-6184-44a7-9b2d-af413ff42a23
+uuid: 49aca1b5-bcb6-49c2-a5eb-4c7f5ffe9985
 langcode: uk
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -8,8 +8,8 @@ dependencies:
   module:
     - node
     - user
-id: avtorski_stati
-label: 'Авторські статі'
+id: avtorski_stati_taxterm
+label: 'Авторські статі (Дубль)'
 module: views
 description: ''
 tag: ''
@@ -252,7 +252,7 @@ display:
       defaults:
         title: false
         arguments: false
-      path: news
+      path: news_test
       arguments: {  }
     cache_metadata:
       max-age: -1

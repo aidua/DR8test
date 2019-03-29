@@ -1,0 +1,24 @@
+uuid: 4fb52dc0-bbee-4d53-95b4-dbf03c693cd5
+langcode: uk
+status: true
+dependencies:
+  config:
+    - contact.form.zakazati_zvorotniy_dzvinok
+    - field.storage.contact_message.field_koli_peredzvoniti_
+  module:
+    - datetime
+id: contact_message.zakazati_zvorotniy_dzvinok.field_koli_peredzvoniti_
+field_name: field_koli_peredzvoniti_
+entity_type: contact_message
+bundle: zakazati_zvorotniy_dzvinok
+label: 'Коли передзвонити?'
+description: 'Зручний час для дзвінка на ваш телефон. '
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

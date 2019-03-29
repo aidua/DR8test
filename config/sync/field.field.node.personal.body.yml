@@ -1,0 +1,22 @@
+uuid: 1a2d0688-b681-49df-b0ef-5c3578dd3075
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.personal
+  module:
+    - text
+id: node.personal.body
+field_name: body
+entity_type: node
+bundle: personal
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

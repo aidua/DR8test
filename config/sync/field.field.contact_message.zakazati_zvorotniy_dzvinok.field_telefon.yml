@@ -1,0 +1,21 @@
+uuid: 32631ecd-4385-42b6-97ac-d45af5592c5f
+langcode: uk
+status: true
+dependencies:
+  config:
+    - contact.form.zakazati_zvorotniy_dzvinok
+    - field.storage.contact_message.field_telefon
+  module:
+    - telephone
+id: contact_message.zakazati_zvorotniy_dzvinok.field_telefon
+field_name: field_telefon
+entity_type: contact_message
+bundle: zakazati_zvorotniy_dzvinok
+label: Телефон
+description: 'Вкажіть ваш телефонний номер.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

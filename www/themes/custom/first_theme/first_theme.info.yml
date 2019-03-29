@@ -12,4 +12,5 @@ regions:
   header: 'Header'
   content: 'Content'
   left_sidebar: 'Left sidebar'
+  right_sidebar: 'Right sidebar'
   footer: 'Footer'

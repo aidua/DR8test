@@ -1,0 +1,22 @@
+uuid: eda54430-fead-4d83-a940-b2fa614f60b3
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.personal
+id: node.personal.promote
+field_name: promote
+entity_type: node
+bundle: personal
+label: 'Винесено на головну сторінку'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Увімкнено
+  off_label: Вимкнено
+field_type: boolean

@@ -1,0 +1,12 @@
+uuid: 97721846-316c-4637-8fea-31ef0157a0bc
+langcode: uk
+status: true
+dependencies: {  }
+id: zakazati_zvorotniy_dzvinok
+label: 'Заказати зворотній дзвінок'
+recipients:
+  - test@test.ua
+reply: "Дякуємо за звернення!\r\nМи передзвонимо вам у вказаний вами час!"
+weight: 0
+message: ''
+redirect: ''

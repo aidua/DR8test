@@ -7,15 +7,17 @@
         {#{% endfor %}#}
     {#</ul>#}
     {% if page.left_sidebar %}
-        <div class="col-md-6 left-sidebar">
-            {{ my_name }}
-
+        <div class="col-md-3 left-sidebar">
+            {#{{ my_name }}#}
             {{ page.left_sidebar }}
         </div>
     {% endif %}
-    <div class="col-md-{{ page.left_sidebar ? '6' : '12' }} content">
-        <h1{{ attributes }}>{{ my_text }}</h1>
+    <div class="col-md-{{ page.left_sidebar ? '6' : '9' }} content">
         {{ page.content }}
-        {{ kint() }}
+        {#<h1{{ attributes }}>{{ my_text }}</h1>#}
+        {#{ kint() }#}
+    </div>
+    <div class="col-md-3 right-sidebar">
+        {{ page.right_sidebar }}
     </div>
 {% endblock %}

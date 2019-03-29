@@ -13,7 +13,7 @@ _core:
 id: first_theme_account_menu
 theme: first_theme
 region: left_sidebar
-weight: -5
+weight: -6
 provider: null
 plugin: 'system_menu_block:account'
 settings:

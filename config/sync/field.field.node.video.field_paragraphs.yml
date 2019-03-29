@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.video
+    - paragraphs.paragraphs_type.video_youtube
   module:
     - entity_reference_revisions
 id: node.video.field_paragraphs
@@ -21,7 +22,8 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles: null
+    target_bundles:
+      video_youtube: video_youtube
     target_bundles_drag_drop:
       youtube:
         weight: -13
@@ -41,4 +43,7 @@ settings:
       youtube_gallery:
         weight: -8
         enabled: false
+      video_youtube:
+        enabled: true
+        weight: 12
 field_type: entity_reference_revisions

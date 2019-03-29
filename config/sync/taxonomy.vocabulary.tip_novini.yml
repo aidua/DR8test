@@ -1,0 +1,9 @@
+uuid: b33f71c8-9111-44f3-8f3c-90e8eaaca757
+langcode: uk
+status: true
+dependencies: {  }
+name: 'Тип новини (Рубрика)'
+vid: tip_novini
+description: ''
+hierarchy: 0
+weight: 0

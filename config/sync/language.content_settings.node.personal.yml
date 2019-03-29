@@ -1,0 +1,11 @@
+uuid: 1334c93a-e8da-4edc-86cb-5945e122fb8b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - node.type.personal
+id: node.personal
+target_entity_type_id: node
+target_bundle: personal
+default_langcode: site_default
+language_alterable: false

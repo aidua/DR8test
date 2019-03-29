@@ -1,0 +1,11 @@
+uuid: 9ddd82f5-1758-4a34-b99d-38b3c9fefed4
+langcode: uk
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pracivniki_kompanii
+id: taxonomy_term.pracivniki_kompanii
+target_entity_type_id: taxonomy_term
+target_bundle: pracivniki_kompanii
+default_langcode: site_default
+language_alterable: false

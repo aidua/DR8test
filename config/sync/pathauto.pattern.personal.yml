@@ -1,0 +1,22 @@
+uuid: d918c65b-7566-40f9-8811-d1e0662ba5ae
+langcode: uk
+status: true
+dependencies:
+  module:
+    - node
+id: personal
+label: 'Персонал (працівники)'
+type: 'canonical_entities:node'
+pattern: 'personal/[node:field_viddil]/[node:title]'
+selection_criteria:
+  e2182daf-f00d-4237-a9e8-e8d2839d8737:
+    id: node_type
+    bundles:
+      personal: personal
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e2182daf-f00d-4237-a9e8-e8d2839d8737
+selection_logic: and
+weight: -5
+relationships: {  }

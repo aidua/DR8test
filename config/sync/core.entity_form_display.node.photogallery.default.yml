@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.photogallery.field_gallery
     - field.field.node.photogallery.field_image
     - field.field.node.photogallery.field_meta_title
+    - field.field.node.photogallery.field_rubrika
     - field.field.node.photogallery.field_tags
     - node.type.photogallery
   module:
@@ -34,6 +35,7 @@ third_party_settings:
     group_anons:
       children:
         - field_tags
+        - field_rubrika
         - field_image
         - body
       parent_name: group_grupa
@@ -68,7 +70,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 15
+    weight: 16
     settings:
       rows: 9
       summary_rows: 3
@@ -100,7 +102,7 @@ content:
     third_party_settings: {  }
     region: content
   field_image:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: media_library_widget
@@ -110,6 +112,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_rubrika:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_tags:
     weight: 13

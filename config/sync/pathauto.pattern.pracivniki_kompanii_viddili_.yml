@@ -1,0 +1,23 @@
+uuid: 436c16fe-d1ae-4ebd-bf9f-05b8210a996f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: pracivniki_kompanii_viddili_
+label: 'Персонал (відділи)'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'personal/[term:name]'
+selection_criteria:
+  7d6006f1-aa27-427b-9b6b-1affea5e3794:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      pracivniki_kompanii: pracivniki_kompanii
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 7d6006f1-aa27-427b-9b6b-1affea5e3794
+selection_logic: and
+weight: -5
+relationships: {  }

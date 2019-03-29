@@ -1,0 +1,33 @@
+uuid: 11c9fccd-cba6-49ad-bd8c-ecf59a4f3d16
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rubrika
+    - node.type.video
+    - taxonomy.vocabulary.tip_novini
+  content:
+    - 'taxonomy_term:tip_novini:8d27cdfa-5fb9-4834-bde0-d05cd2745da1'
+id: node.video.field_rubrika
+field_name: field_rubrika
+entity_type: node
+bundle: video
+label: Рубрика
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: 8d27cdfa-5fb9-4834-bde0-d05cd2745da1
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tip_novini: tip_novini
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

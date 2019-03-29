@@ -1,0 +1,29 @@
+uuid: 47a1a997-3583-4965-88ed-72f2b44b9839
+langcode: uk
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_viddil
+    - node.type.personal
+    - taxonomy.vocabulary.pracivniki_kompanii
+id: node.personal.field_viddil
+field_name: field_viddil
+entity_type: node
+bundle: personal
+label: Відділ
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pracivniki_kompanii: pracivniki_kompanii
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,4 +1,4 @@
-photoswipe_always_load_non_admin: false
+photoswipe_always_load_non_admin: true
 options:
   showAnimationDuration: 333
   hideAnimationDuration: 333
@@ -25,3 +25,7 @@ options:
 _core:
   default_config_hash: V8V4qoFWUmhf9Atc_VX3qfO2bgt4z7cF4YCm7hlVdeY
 langcode: uk
+actions: null
+form_build_id: form-ykTAmXWguf8E75di5G4uve1H4cR2vVKzjWqn6q-18D0
+form_token: 7eqjma0Xhyegv9OwQxOF7rrKeaqHvBb69dCnqz5cQb0
+form_id: photoswipe_admin_settings
