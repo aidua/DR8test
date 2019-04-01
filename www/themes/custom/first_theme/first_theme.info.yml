@@ -9,8 +9,12 @@ libraries:
   - first_theme/custom
 
 regions:
-  header: 'Header'
+  header_left: 'Header - left'
+  header_center: 'Header - center'
+  header_right: 'Header - right'
   content: 'Content'
   left_sidebar: 'Left sidebar'
   right_sidebar: 'Right sidebar'
-  footer: 'Footer'
+  footer_left: 'Footer - left'
+  footer_center: 'Footer - center'
+  footer_right: 'Footer - right'

@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Component\Utility\Html;
+
 function first_theme_preprocess_page(&$vars) {
     $vars['my_name'] = 'AID';
     $vars['my_text'] = theme_get_setting('my_text');
@@ -18,3 +20,14 @@ function first_theme_theme() {
     ];
 }
 
+/**
+ * Implements hook_form_alter()
+ */
+function first_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    if ($form_id == 'search_block_form') {
+        $form['keys']['#attributes']['placeholder'][] = t('Пошук');
+        $form['#attributes']['class'][] = Html::getClass('video-width222');
+        $form['keys']['#attributes']['class'][] = Html::getClass('video-width');
+        kint($form);
+    }
+}

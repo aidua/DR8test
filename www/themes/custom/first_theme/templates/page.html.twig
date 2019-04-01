@@ -1,7 +1,13 @@
 <div class="container maincontainer">
     <div class="row">
-        <div class="col-md-12 header">
-            {{ page.header }}
+        <div class="col-md-4 col-xs-12 header_left">
+            {{ page.header_left }}
+        </div>
+        <div class="col-md-5 hidden-xs header_center">
+            {{ page.header_center }}
+        </div>
+        <div class="col-md-3 col-xs-12 header_right">
+            {{ page.header_right }}
         </div>
     </div>
     <div class="row">
@@ -17,8 +23,14 @@
         {% endblock %}
     </div>
     <div class="row">
-        <div class="col-md-12 footer">
-            {{ page.footer }}
+        <div class="col-md-3 col-xs-12 footer_left">
+            {{ page.footer_left }}
+        </div>
+        <div class="col-md-7 hidden-xs footer_center">
+            {{ page.footer_center }}
+        </div>
+        <div class="col-md-2 col-xs-12 footer_right">
+            {{ page.footer_right }}
         </div>
     </div>
 </div>

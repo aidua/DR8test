@@ -1,6 +1,6 @@
 uuid: e26e98bb-9b33-4001-9700-5a65618ccd4e
 langcode: uk
-status: false
+status: true
 dependencies:
   config:
     - system.menu.tools
@@ -12,8 +12,8 @@ _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: first_theme_tools
 theme: first_theme
-region: header
-weight: 0
+region: header_center
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

@@ -1,0 +1,20 @@
+uuid: 173bcb8f-f32e-4af0-af81-0d5b8d4428fb
+langcode: uk
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - first_theme
+id: pracyuenadrupal
+theme: first_theme
+region: footer_right
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Працює на Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
