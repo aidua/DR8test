@@ -1,7 +1,13 @@
-<ul>
+<ul class="nav nav-pills nav-stacked" role="menu">
     {% for item in items %}
-        <li class="my-menu-item">
+        <li {{ item.in_active_trail ? 'class="active"' : '' }}>
             {{ link(item.title, item.url) }}
+            {#{{ dump( item ) }}#}
+
+
+                {#is_collapsed#}
         </li>
     {% endfor %}
 </ul>
+
+{{ secondary_menu }}

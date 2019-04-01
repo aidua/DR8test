@@ -7,6 +7,35 @@ function first_theme_preprocess_page(&$vars) {
     $vars['my_text'] = theme_get_setting('my_text');
     $vars['attributes']['class'][] = 'wm-test';
 
+    $secondary_menu = _render_secondary_menu('main');
+    $vars['secondary_menu'] = $secondary_menu;
+}
+
+/**
+ * Helper function for generate secondary menu items;
+ * @param $menu_name
+ * @return array
+ */
+function _render_secondary_menu($menu_name) {
+    $menu_tree = \Drupal::menuTree();
+    // Build the typical default set of menu tree parameters.
+    $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+    if(count($parameters->activeTrail) > 1) {
+        $parameters->minDepth = 2;
+        // Load the tree based on this set of parameters.
+        $tree = $menu_tree->load($menu_name, $parameters);
+        // Transform the tree using the manipulators you want.
+        $manipulators = array(
+            // Only show links that are accessible for the current user.
+            array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+            // Use the default sorting of menu links.
+            array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+        );
+        $tree = $menu_tree->transform($tree, $manipulators);
+        // Finally, build a renderable array from the transformed tree.
+        $menu = $menu_tree->build($tree);
+        return  array('#markup' => drupal_render($menu));
+    }
 }
 
 function first_theme_theme() {
@@ -21,13 +50,26 @@ function first_theme_theme() {
 }
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function first_theme_preprocess_block__system_branding_block(&$variables) {
+    $variables['attributes']['class'][] = Html::getClass('block-first-theme-branding');
+    //dump($variables);
+    //kint($variables);
+}
+
+/**
  * Implements hook_form_alter()
  */
 function first_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
     if ($form_id == 'search_block_form') {
+        //$form['#attributes']['class'][] = Html::getClass('video-width222');
         $form['keys']['#attributes']['placeholder'][] = t('Пошук');
-        $form['#attributes']['class'][] = Html::getClass('video-width222');
-        $form['keys']['#attributes']['class'][] = Html::getClass('video-width');
-        kint($form);
+        $form['keys']['#attributes']['class'][] = Html::getClass('form-control');
+        $form['actions']['#attributes']['class'][] = Html::getClass('text-center');
+        $form['actions']['submit']['#value'] = t('Шукати');
+        $form['actions']['submit']['#attributes']['class'][] = Html::getClass('btn');
+        $form['actions']['submit']['#attributes']['class'][] = Html::getClass('btn-default');
     }
 }
+
