@@ -7,36 +7,8 @@ function first_theme_preprocess_page(&$vars) {
     $vars['my_text'] = theme_get_setting('my_text');
     $vars['attributes']['class'][] = 'wm-test';
 
-    $secondary_menu = _render_secondary_menu('main');
-    $vars['secondary_menu'] = $secondary_menu;
 }
 
-/**
- * Helper function for generate secondary menu items;
- * @param $menu_name
- * @return array
- */
-function _render_secondary_menu($menu_name) {
-    $menu_tree = \Drupal::menuTree();
-    // Build the typical default set of menu tree parameters.
-    $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
-    if(count($parameters->activeTrail) > 1) {
-        $parameters->minDepth = 2;
-        // Load the tree based on this set of parameters.
-        $tree = $menu_tree->load($menu_name, $parameters);
-        // Transform the tree using the manipulators you want.
-        $manipulators = array(
-            // Only show links that are accessible for the current user.
-            array('callable' => 'menu.default_tree_manipulators:checkAccess'),
-            // Use the default sorting of menu links.
-            array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-        );
-        $tree = $menu_tree->transform($tree, $manipulators);
-        // Finally, build a renderable array from the transformed tree.
-        $menu = $menu_tree->build($tree);
-        return  array('#markup' => drupal_render($menu));
-    }
-}
 
 function first_theme_theme() {
     return [

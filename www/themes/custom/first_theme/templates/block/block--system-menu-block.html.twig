@@ -32,9 +32,9 @@
  */
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
   {# Menu. #}
   {% block content %}
     {{ content }}
   {% endblock %}
-</nav>
+
+  {#{{ kint(content) }}#}
