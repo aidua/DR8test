@@ -24,7 +24,7 @@ a {
 .dropdown-submenu {
   position: relative;
 
-  & > .dropdown-menu {
+  >.dropdown-menu {
     top: 0;
     left: 100%;
     margin-top: -1px;
@@ -35,11 +35,11 @@ a {
     padding: 0;
     background-color: #c1d4df;
 
-    & > li {
+    >li {
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       border-radius: 6px;
-      & > a {
+      >a {
         padding: 10px 15px;
 
           &:hover {
@@ -49,16 +49,16 @@ a {
     }
   }
   &:hover {
-    & > .dropdown-menu {
+    >.dropdown-menu {
       display: block;
-      & > a {
+      >a {
         &:after {
           border-left-color: #fff;
         }
       }
     }
   }
-  & > a {
+  > a {
     &:after {
       display: block;
       content: " ";
@@ -75,7 +75,8 @@ a {
   }
   .pull-left {
     float: none;
-    & > .dropdown-menu {
+
+    >.dropdown-menu {
       left: -100%;
       margin-left: 10px;
       -webkit-border-radius: 6px;
@@ -86,8 +87,8 @@ a {
 }
 
 .nav {
-  &>li {
-    &>a {
+  >li {
+    >a {
       padding: 10px 15px 10px 20px;
 
       &:before {
@@ -104,8 +105,8 @@ a {
         margin-left: -10px;
       }
     }
-    & .active {
-      &>a {
+    &.active {
+      >a {
         &:before {
           border-left-color: #fff;
         }
@@ -121,5 +122,3 @@ a {
 .nav-stacked > li + li.dropdown-submenu-mobile {
   margin-left: 25px;
 }
-
-

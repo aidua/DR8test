@@ -64,7 +64,7 @@ a {
     margin-top: 5px;
     margin-left: -10px; }
 
-.nav > li .active > a:before {
+.nav > li.active > a:before {
   border-left-color: #fff; }
 
 .nav > li:hover {
