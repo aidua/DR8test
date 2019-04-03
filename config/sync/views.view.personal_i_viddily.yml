@@ -345,6 +345,9 @@ display:
         menu_name: main
         weight: -50
         parent: 'menu_link_content:6a6d8949-1bfa-4f10-8374-17f27b20cc27'
+        description: ''
+        expanded: true
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
