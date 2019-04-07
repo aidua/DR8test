@@ -1,0 +1,20 @@
+uuid: ff846502-4bd7-4d1a-ba42-d0858664c85f
+langcode: uk
+status: true
+dependencies:
+  module:
+    - hellomodule
+  theme:
+    - first_theme
+id: socialbuttonsblock
+theme: first_theme
+region: footer_center
+weight: 0
+provider: null
+plugin: socbuttons_block
+settings:
+  id: socbuttons_block
+  label: 'Social Buttons Block'
+  provider: hellomodule
+  label_display: '0'
+visibility: {  }

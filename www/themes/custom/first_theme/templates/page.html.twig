@@ -1,35 +1,35 @@
 <div class="container maincontainer">
     <div class="row">
-        <div class="col-md-3 col-xs-12 header_left">
+        <div class="col-md-6 col-xs-24 header_left">
             {{ page.header_left }}
         </div>
-        <div class="col-md-6 hidden-xs header_center">
+        <div class="col-md-12 hidden-xs header_center">
             {{ page.header_center }}
         </div>
-        <div class="col-md-3 col-xs-12 header_right">
+        <div class="col-md-6 col-xs-24 header_right">
             {{ page.header_right }}
         </div>
     </div>
     <div class="row">
         {% block content %}
             {% if page.left_sidebar %}
-                <div class="col-md-3 left-sidebar">
+                <div class="col-md-5 left-sidebar">
                     {{ page.left_sidebar }}
                 </div>
             {% endif %}
-            <div class="col-md-{{ page.left_sidebar ? '9' : '12' }} content">
+            <div class="col-md-{{ page.left_sidebar ? '19' : '24' }} content">
                 {{ page.content }}
             </div>
         {% endblock %}
     </div>
-    <div class="row">
-        <div class="col-md-3 col-xs-12 footer_left">
+    <div class="row footer">
+        <div class="col-md-6 col-xs-24 footer_left">
             {{ page.footer_left }}
         </div>
-        <div class="col-md-7 hidden-xs footer_center">
+        <div class="col-md-14 footer_center">
             {{ page.footer_center }}
         </div>
-        <div class="col-md-2 col-xs-12 footer_right">
+        <div class="col-md-4 col-xs-24 footer_right">
             {{ page.footer_right }}
         </div>
     </div>
