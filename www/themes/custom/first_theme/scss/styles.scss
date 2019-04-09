@@ -3,6 +3,20 @@
 $text-color: #555555;
 $left-sidebar-bg: #e0eaef;
 
+.row {
+  &.header {
+    margin-bottom: 20px;
+  }
+}
+.row {
+  &.body {
+  }
+}
+.row {
+  &.footer {
+  }
+}
+
 a {
   text-decoration: underline;
 }
@@ -190,7 +204,198 @@ a {
   color: white;
 }
 
+.block--views-block--rubriki-block-1 {
+  h2 {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  footer {
+    p {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.block-rubriki {
+  ul {
+    list-style-type: none;
+    padding: 0 15px;
+
+    li {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 115px;
+        padding-top: 90px;
+        font-weight: bold;
+        text-align: center;
+        opacity: 0.8;
+        filter: alpha(Opacity=80);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 0 0 $border-radius-base $border-radius-base;
+
+        &:hover {
+          background-color: #fff;
+          opacity: 1;
+          filter: alpha(Opacity=100);
+        }
+      }
+
+      &.rubriki-row-1 a, &:nth-child(1) a {
+        background-image: url("../images/block-rubriki-1.png");
+      }
+      &.rubriki-row-1 a, &:nth-child(2) a {
+        background-image: url("../images/block-rubriki-2.png");
+      }
+      &.rubriki-row-1 a, &:nth-child(3) a {
+        background-image: url("../images/block-rubriki-3.png");
+      }
+      &.rubriki-row-1 a, &:nth-child(4) a {
+        background-image: url("../images/block-rubriki-4.png");
+      }
+
+    }
+  }
+}
+
+.col-vsi-novini {
+  height: 215px;
+  margin-bottom: 25px;
+
+  .element {
+    position: relative;
+
+    .bg-image {
+      width: auto;
+      height: 215px;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .novina {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 11;
+      overflow: hidden;
+
+      .bg-dark {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 15;
+        transition: background-color 1s;
+        -webkit-transition: background-color 1s;
+        -moz-transition: background-color 1s;
+      }
+
+      .info {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        z-index: 25;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+
+        span {
+          display: block;
+          padding: 5px 0;
+          text-align: center;
+          font-size: 12px;
+          font-weight: bold;
+          color: #fff;
+          line-height: 13px;
+
+          &.type {
+            float: left;
+            padding-left: 5px;
+            width: 45%;
+          }
+          &.data {
+            float: right;
+            padding-right: 5px;
+            text-align: right;
+            width: 54%;
+          }
+        }
+
+        p {
+          color: #feffe9;
+          font-size: 11px;
+          padding: 0 10px 10px;
+          overflow: hidden;
+        }
+      }
+
+      a {
+        color: #add2df;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 111;
+        padding: 170px 0 50px;
+        text-align: center;
+        font-size: $font-size-h5;
+        font-weight: bold;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        background: url("../images/col-vsi-novini-novina.png") 0px 165px repeat-x;
+      }
+
+      &:hover {
+        .bg-dark {
+          background-color: #000;
+          opacity: 0.5;
+        }
+
+        .info {
+          top: 100px;
+        }
+
+        a {
+          padding: 75px 0 100px;
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
 @media(max-width:767px){
+  .row {
+    &.header {
+      margin-bottom: 0;
+    }
+  }
+  .row {
+    &.body {
+    }
+  }
+  .row {
+    &.footer {
+    }
+  }
+
   .row_frontpage {
     .views-field-field-image {
       text-align: center;
@@ -200,15 +405,33 @@ a {
         width: 90%;
       }
     }
-  }
 
-  .views-field-title {
-    margin-top: $line-height-computed / 2;
+    .views-field-title {
+      margin-top: $line-height-computed;
+      margin-bottom: ($line-height-computed / 3);
 
-    a {
-      font-size: $font-size-h4;
+      a {
+        font-size: $font-size-h4;
+      }
     }
   }
+
+  .block-top-search {
+    form {
+      &> div {
+        display: inline-block;
+
+        &:nth-child(1) {
+          width: 70%;
+        }
+        &:nth-child(2) {
+          width: 27%;
+          float: right;
+        }
+      }
+    }
+  }
+
 
   .views-field-body {
     max-height: 45px;
@@ -230,8 +453,78 @@ a {
       }
     }
   }
+  .block--views-block--rubriki-block-1 {
+    footer {
+      p {
+        text-align: center;
+        margin: 20px 0;
+      }
+    }
+  }
 
-  .footer_left {
+  .block-rubriki {
+    ul {
+      li {
+        a {
+          width: 100%;
+          height: 50px;
+          padding: 15px;
+          opacity: 1;
+          filter: alpha(Opacity=100);
+          text-transform: uppercase;
+        }
+
+        &.rubriki-row-1 a, &:nth-child(1) a {
+          background-image: none;
+          background-color: #cdf1b0;
+        }
+        &.rubriki-row-1 a, &:nth-child(2) a {
+          background-image: none;
+          background-color: #37bff7;
+        }
+        &.rubriki-row-1 a, &:nth-child(3) a {
+          background-image: none;
+          background-color: #fbc974;
+        }
+        &.rubriki-row-1 a, &:nth-child(4) a {
+          background-image: none;
+          background-color: #81e2f7;
+        }
+
+      }
+    }
+  }
+
+  .col-vsi-novini {
+    .element {
+      .novina {
+        .info {
+          background: url("../images/col-vsi-novini-novina.png") 0px 0px repeat-x;
+          top: 190px;
+        }
+        a {
+          padding: 165px 0 55px;
+          background-position: 0px 160px;
+        }
+        &:hover {
+          .bg-dark {
+            background-color: transparent;
+            opacity: 1;
+          }
+          .info {
+            top: 190px;
+          }
+          a {
+            padding: 165px 0 55px;
+            background: url("../images/col-vsi-novini-novina.png") 0px 160px repeat-x;
+          }
+        }
+      }
+    }
+  }
+
+
+    .footer_left {
     padding-bottom: 15px;
   }
 

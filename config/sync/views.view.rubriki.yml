@@ -185,7 +185,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<p><a href="/rubryky" title="Всі рубрики новин">переглянути всі >></p>'
+            value: '<p class="rubriki-p"><a href="/rubryky" title="Всі рубрики новин">переглянути всі >></p>'
             format: basic_html
           plugin_id: text
       empty: {  }
@@ -226,6 +226,7 @@ display:
         style: false
         row: false
         css_class: false
+        footer: false
       block_description: ''
       relationships: {  }
       fields:
@@ -362,6 +363,20 @@ display:
           separator: ''
           hide_empty: false
       css_class: ''
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<p><a href="/rubryky" title="Всі рубрики новин">переглянути всі >></p>'
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

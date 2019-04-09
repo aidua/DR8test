@@ -1,5 +1,5 @@
 <div class="container maincontainer">
-    <div class="row">
+    <div class="row header">
         <div class="col-md-6 col-xs-24 header_left">
             {{ page.header_left }}
         </div>
@@ -10,7 +10,7 @@
             {{ page.header_right }}
         </div>
     </div>
-    <div class="row">
+    <div class="row body">
         {% block content %}
             {% if page.left_sidebar %}
                 <div class="col-md-5 left-sidebar">
