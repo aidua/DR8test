@@ -1,9 +1,10 @@
-uuid: 0c6aa804-4153-44dd-8a1e-ca9f5a148e0a
+uuid: 1be9f468-cf12-4d5e-b5ae-1312ec578e44
 langcode: uk
 status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
@@ -17,33 +18,24 @@ dependencies:
     - user
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
-id: node.article.default
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: default
+mode: full
 content:
   comment:
     type: comment_default
-    weight: 5
+    weight: 7
     region: content
     label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-  field_image:
-    type: entity_reference_entity_view
-    weight: 1
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
     weight: 3
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -51,7 +43,7 @@ content:
     region: content
   field_rubrika:
     weight: 7
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -66,7 +58,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 0
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -77,4 +69,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_image: true
   langcode: true

@@ -46,7 +46,7 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
         //ksm($build, $paragraph, $display, $view_mode);
         $bem_block = 'paragraph-'.$paragraph->bundle().($view_mode=='default'? '':'-'.$view_mode);
         $image_position = $paragraph -> getBehaviorSetting($this->getPluginId(),'image_position', 'left');
-        $image_size = $paragraph -> getBehaviorSetting($this->getPluginId(),'image_size', '4_12');
+        $image_size = $paragraph -> getBehaviorSetting($this->getPluginId(),'image_size', '8_24');
 
         $build['#attributes']['class'][] = Html::getClass($bem_block.'--image-position-'.$image_position);
         $build['#attributes']['class'][] = Html::getClass($bem_block.'--image-size-'.$image_size);
@@ -54,15 +54,18 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
         //ksm($build);
         if (isset($build['field_image']) && ($build['field_image']['#formatter'] == 'image')) {
             switch ($image_size) {
-                case '4_12':
+                case '8_24':
                 default:
-                    $image_style = 'paragraph_image_text_4_of_12';
+                    $image_style = 'paragraph_image_text_8_of_24';
                     break;
-                case '6_12':
-                    $image_style = 'paragraph_image_text_6_of_12';
+                case '12_24':
+                    $image_style = 'paragraph_image_text_12_of_24';
                     break;
-                case '8_12':
-                    $image_style = 'paragraph_image_text_8_of_12';
+                case '16_24':
+                    $image_style = 'paragraph_image_text_16_of_24';
+                    break;
+                case '24_24':
+                    $image_style = 'paragraph_image_text_24_of_24';
                     break;
             }
             $build['field_image'][0]['#image_style'] = $image_style;
@@ -88,11 +91,12 @@ class ImageAndTextBehavior extends ParagraphsBehaviorBase {
             '#title' => $this->t('Image size.'),
             '#description' => $this->t('Size of the image in grid'),
             '#options' => [
-                '4_12' => $this->t('4 columns of 12'),
-                '6_12' => $this->t('6 columns of 12'),
-                '8_12' => $this->t('8 columns of 12'),
+                '8_24' => $this->t('8 columns of 24'),
+                '12_24' => $this->t('12 columns of 24'),
+                '16_24' => $this->t('16 columns of 24'),
+                '24_24' => $this->t('24 columns of 24'),
             ],
-            '#default_value' => $paragraph -> getBehaviorSetting($this->getPluginId(),'image_size', '4_12'),
+            '#default_value' => $paragraph -> getBehaviorSetting($this->getPluginId(),'image_size', '8_24'),
         ];
 
         return $form;

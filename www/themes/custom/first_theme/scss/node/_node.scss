@@ -1,0 +1,33 @@
+
+
+.node-posted__author {
+  margin-bottom: 25px;
+  &--name {
+    span {
+      font-weight: bold;
+    }
+  }
+  &--date {
+    text-align: right;
+  }
+}
+
+
+@media(max-width:767px){
+  .node-posted__author {
+    margin-bottom: 25px;
+    &--name {
+      text-align: center;
+    }
+    &--date {
+      text-align: center;
+    }
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+
+@import "node--article";
+@import "node--video";

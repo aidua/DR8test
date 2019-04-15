@@ -1,0 +1,28 @@
+
+.previous-next {
+  margin-bottom: 15px;
+
+  .previous-next__previous {
+    text-align: left;
+  }
+  .previous-next__next {
+    text-align: right;
+  }
+}
+
+
+@media(max-width:767px){
+  .previous-next {
+    margin-bottom: 10px;
+
+    .previous-next__previous {
+      text-align: center;
+    }
+    .previous-next__next {
+      text-align: center;
+    }
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}

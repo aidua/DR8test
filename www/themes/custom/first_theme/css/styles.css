@@ -334,4 +334,50 @@ a {
     width: 40px;
     margin-right: 10px; } }
 
+.node-posted__author {
+  margin-bottom: 25px; }
+  .node-posted__author--name span {
+    font-weight: bold; }
+  .node-posted__author--date {
+    text-align: right; }
+
+@media (max-width: 767px) {
+  .node-posted__author {
+    margin-bottom: 25px; }
+    .node-posted__author--name {
+      text-align: center; }
+    .node-posted__author--date {
+      text-align: center; } }
+
+.node-posted__paragraphs .field-rubrika {
+  margin-bottom: 15px; }
+
+.paragraph {
+  margin-bottom: 25px; }
+
+@media (max-width: 767px) {
+  .node-posted__paragraphs .field-rubrika {
+    margin-bottom: 10px; }
+  .paragraph {
+    margin-bottom: 15px; } }
+
+.paragraph--type--image-and-text img {
+  width: 100%;
+  height: auto; }
+
+.previous-next {
+  margin-bottom: 15px; }
+  .previous-next .previous-next__previous {
+    text-align: left; }
+  .previous-next .previous-next__next {
+    text-align: right; }
+
+@media (max-width: 767px) {
+  .previous-next {
+    margin-bottom: 10px; }
+    .previous-next .previous-next__previous {
+      text-align: center; }
+    .previous-next .previous-next__next {
+      text-align: center; } }
+
 /*# sourceMappingURL=maps/styles.css.map */

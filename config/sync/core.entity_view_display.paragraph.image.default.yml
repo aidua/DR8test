@@ -16,7 +16,7 @@ content:
   field_media_image:
     type: photoswipe_field_formatter
     weight: 0
-    label: above
+    label: hidden
     settings:
       photoswipe_node_style_first: ''
       photoswipe_node_style: ''

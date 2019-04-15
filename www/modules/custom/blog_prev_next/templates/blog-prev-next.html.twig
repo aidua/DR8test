@@ -1,19 +1,21 @@
 {% set bem_block = 'previous-next' %}
-<div{{ attributes.addClass(bem_block) }}>
-    <div class="{{ bem_block }}__previous">
-        {% if previous %}
-            <a href="{{ previus.url }}" class="{{ bem_block }}__link {{ bem_block }}__link--previous">
-                <span>{{ 'Previous'|t }}:</span>
-                {{ previous.label }}
-            </a>
-        {% endif %}
+<div class="col-xs-24 col-md-24">
+  <div{{ attributes.addClass('row').addClass(bem_block) }}>
+    <div class="col-xs-24 col-md-12 {{ bem_block }}__previous">
+      {% if previous %}
+        <a href="{{ previus.url }}" class="{{ bem_block }}__link {{ bem_block }}__link--previous">
+          <span>{{ 'Previous'|t }}:</span>
+          {{ previous.label }}
+        </a>
+      {% endif %}
     </div>
-    <div class="{{ bem_block }}__next">
-        {% if next %}
-            <a href="{{ next.url }}" class="{{ bem_block }}__link {{ bem_block }}__link--next">
-                <span>{{ 'Next'|t }}:</span>
-                {{ next.label }}
-            </a>
-        {% endif %}
+    <div class="col-xs-24 col-md-12 {{ bem_block }}__next">
+      {% if next %}
+        <a href="{{ next.url }}" class="{{ bem_block }}__link {{ bem_block }}__link--next">
+          <span>{{ 'Next'|t }}:</span>
+          {{ next.label }}
+        </a>
+      {% endif %}
     </div>
+  </div>
 </div>
