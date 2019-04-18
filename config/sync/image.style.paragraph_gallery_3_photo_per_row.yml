@@ -1,0 +1,15 @@
+uuid: 3c31e222-4d1e-49ac-98e9-976224a72d3a
+langcode: uk
+status: true
+dependencies: {  }
+name: paragraph_gallery_3_photo_per_row
+label: 'Paragraph Gallery - 3 photo per row'
+effects:
+  8dc2b92a-0dc1-4f7c-be19-8dda3d7321d8:
+    uuid: 8dc2b92a-0dc1-4f7c-be19-8dda3d7321d8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 286
+      height: 286
+      anchor: center-center

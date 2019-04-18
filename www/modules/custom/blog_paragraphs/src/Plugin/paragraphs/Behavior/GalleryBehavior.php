@@ -48,6 +48,24 @@ class GalleryBehavior extends ParagraphsBehaviorBase {
         $images_per_row = $paragraph -> getBehaviorSetting($this->getPluginId(),'items_per_row', 3);
         $bem_block = 'paragraph-'.$paragraph->bundle().($view_mode=='default'? '':'-'.$view_mode);
         $build['#attributes']['class'][] = Html::getClass($bem_block.'--images-per-row-'.$images_per_row);
+
+        if ( isset($build['field_images']) && $build['field_images']['#formatter'] == 'photoswipe_field_formatter' ) {
+            switch ($images_per_row) {
+                case '4':
+                default:
+                    $photo_style = 'paragraph_gallery_4_photo_per_row';
+                    break;
+                case '3':
+                    $photo_style = 'paragraph_gallery_3_photo_per_row';
+                    break;
+                case '2':
+                    $photo_style = 'paragraph_gallery_2_photo_per_row';
+                    break;
+            }
+            for ($i = 0; $i < count($build['field_images']['#items']); $i++) {
+                $build['field_images'][$i]['#display_settings']['photoswipe_node_style'] = $photo_style;
+            }
+        }
     }
 
     /**

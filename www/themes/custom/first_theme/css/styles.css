@@ -10,8 +10,10 @@ a {
 .search-block-form {
   padding: 10px 0; }
 
-.left-sidebar nav ul {
-  background-color: #e0eaef; }
+.left-sidebar {
+  min-height: 850px; }
+  .left-sidebar nav ul {
+    background-color: #e0eaef; }
 
 .dropdown-submenu {
   position: relative; }
@@ -273,6 +275,8 @@ a {
     .block-top-search form > div:nth-child(2) {
       width: 27%;
       float: right; }
+  .left-sidebar {
+    min-height: auto; }
   .views-field-body {
     max-height: 45px;
     overflow: hidden; }
@@ -320,13 +324,15 @@ a {
   .col-vsi-novini .element .novina:hover a {
     padding: 165px 0 55px;
     background: url("../images/col-vsi-novini-novina.png") 0px 160px repeat-x; }
-  .footer_left {
-    padding-bottom: 15px; }
-  .footer_center {
-    padding-bottom: 15px;
-    text-align: center; }
-  .footer_right {
-    text-align: center; }
+  .footer {
+    padding: 15px 0; }
+    .footer .footer__left {
+      padding-bottom: 15px; }
+    .footer .footer__center {
+      padding-bottom: 15px;
+      text-align: center; }
+    .footer .footer__right {
+      text-align: center; }
   .fa {
     padding: 10px;
     font-size: 20px;
@@ -349,6 +355,42 @@ a {
     .node-posted__author--date {
       text-align: center; } }
 
+.views-view-personal__list {
+  margin-bottom: 15px; }
+
+.views-view-personal__element a {
+  text-align: center; }
+  .views-view-personal__element a img {
+    width: 100%;
+    height: auto; }
+  .views-view-personal__element a span {
+    font-weight: bold; }
+
+.views-view-personal__element p {
+  text-align: center; }
+
+@media (max-width: 767px) {
+  .views-view-personal__list h3 {
+    text-align: center; } }
+
+.views-view-rubryky__list {
+  margin-bottom: 15px; }
+  .views-view-rubryky__list h3 {
+    margin-bottom: 15px;
+    text-align: center; }
+
+.views-view-rubryky__element {
+  margin-bottom: 15px;
+  text-align: center; }
+  .views-view-rubryky__element a img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px; }
+  .views-view-rubryky__element a span {
+    font-weight: bold; }
+  .views-view-rubryky__element p {
+    text-align: center; }
+
 .node-posted__paragraphs .field-rubrika {
   margin-bottom: 15px; }
 
@@ -364,6 +406,20 @@ a {
 .paragraph--type--image-and-text img {
   width: 100%;
   height: auto; }
+
+.paragraph--type--image a img {
+  width: 100%;
+  height: auto; }
+
+.paragraph-gallery__content--field-images-item {
+  margin-bottom: 20px; }
+  .paragraph-gallery__content--field-images-item img {
+    width: 100%;
+    height: auto; }
+
+@media (max-width: 767px) {
+  .paragraph-gallery__content--field-images-item {
+    margin-bottom: 15px; } }
 
 .previous-next {
   margin-bottom: 15px; }

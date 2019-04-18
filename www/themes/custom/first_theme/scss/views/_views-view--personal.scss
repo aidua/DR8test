@@ -1,0 +1,36 @@
+
+.views-view-personal {
+  &__list {
+    margin-bottom: 15px;
+  }
+  &__element {
+    a {
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+
+@media(max-width:767px){
+  .views-view-personal {
+    &__list {
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}

@@ -4,7 +4,7 @@
     <div class="col-xs-24 col-md-12 {{ bem_block }}__previous">
       {% if previous %}
         <a href="{{ previus.url }}" class="{{ bem_block }}__link {{ bem_block }}__link--previous">
-          <span>{{ 'Previous'|t }}:</span>
+          <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> <span>{{ 'Previous'|t }}:</span>
           {{ previous.label }}
         </a>
       {% endif %}
@@ -13,7 +13,7 @@
       {% if next %}
         <a href="{{ next.url }}" class="{{ bem_block }}__link {{ bem_block }}__link--next">
           <span>{{ 'Next'|t }}:</span>
-          {{ next.label }}
+          {{ next.label }} <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
         </a>
       {% endif %}
     </div>

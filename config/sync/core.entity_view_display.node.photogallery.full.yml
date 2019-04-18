@@ -1,0 +1,68 @@
+uuid: 796b0629-12ec-4d29-96da-82fec9240b55
+langcode: uk
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.photogallery.body
+    - field.field.node.photogallery.field_gallery
+    - field.field.node.photogallery.field_image
+    - field.field.node.photogallery.field_meta_title
+    - field.field.node.photogallery.field_rubrika
+    - field.field.node.photogallery.field_tags
+    - node.type.photogallery
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.photogallery.full
+targetEntityType: node
+bundle: photogallery
+mode: full
+content:
+  field_gallery:
+    type: entity_reference_revisions_entity_view
+    weight: 106
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_meta_title:
+    weight: 104
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_rubrika:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  previous_next:
+    weight: 110
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_image: true
+  langcode: true

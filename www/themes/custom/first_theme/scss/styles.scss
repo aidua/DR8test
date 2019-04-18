@@ -3,6 +3,7 @@
 $text-color: #555555;
 $left-sidebar-bg: #e0eaef;
 
+
 .row {
   &.header {
     margin-bottom: 20px;
@@ -30,6 +31,8 @@ a {
 }
 
 .left-sidebar {
+  min-height: 850px;
+
   nav {
     ul {
       background-color: $left-sidebar-bg;
@@ -432,6 +435,9 @@ a {
     }
   }
 
+  .left-sidebar {
+    min-height: auto;
+  }
 
   .views-field-body {
     max-height: 45px;
@@ -523,19 +529,23 @@ a {
     }
   }
 
+  .footer {
+    padding: 15px 0;
 
-    .footer_left {
-    padding-bottom: 15px;
+    .footer__left {
+      padding-bottom: 15px;
+    }
+
+    .footer__center {
+      padding-bottom: 15px;
+      text-align: center;
+    }
+
+    .footer__right {
+      text-align: center;
+    }
   }
 
-  .footer_center {
-    padding-bottom: 15px;
-    text-align: center;
-  }
-
-  .footer_right {
-    text-align: center;
-  }
 
   .fa {
     padding: 10px;
@@ -550,5 +560,6 @@ a {
 @media(min-width:1200px){}
 
 @import "node/node";
+@import "views/views";
 @import "paragraph/paragraph";
 @import "modules/previous-next";

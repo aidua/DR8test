@@ -1,0 +1,15 @@
+uuid: 27bc2422-da2e-440a-a264-a3b958c8072e
+langcode: uk
+status: true
+dependencies: {  }
+name: paragraph_gallery_2_photo_per_row
+label: 'Paragraph Gallery - 2 photo per row'
+effects:
+  6e56e635-16f5-46e0-9e2e-9bb80f0c09af:
+    uuid: 6e56e635-16f5-46e0-9e2e-9bb80f0c09af
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 360
+      height: 270
+      anchor: center-center

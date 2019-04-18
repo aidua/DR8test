@@ -70,27 +70,28 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+{%
+  set classes = [
+  'node-posted',
+  'node-posted--photogallery',
+]
+%}
+
+<article{{ attributes.addClass(classes) }}>
 
   {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+    <div class="row node-posted__author">
+      <div class="col-xs-24 col-md-18 node-posted__author--name">
+        {% trans %}Posted by {{ author_name }}{% endtrans %}
       </div>
-    </footer>
+      <div class="col-xs-24 col-md-6 node-posted__author--date">
+        {{ date }}
+      </div>
+    </div>
   {% endif %}
 
-  <div{{ content_attributes }}>
+  <div class="row node-posted__paragraphs">
     {{ content }}
   </div>
 
