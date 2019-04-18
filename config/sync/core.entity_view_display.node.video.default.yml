@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.video.field_paragraphs
     - field.field.node.video.field_rubrika
     - field.field.node.video.field_tags
+    - image.style.paragraph_gallery_4_photo_per_row
     - node.type.video
   module:
     - entity_reference_revisions
     - metatag
+    - photoswipe
     - text
     - user
 id: node.video.default
@@ -21,20 +23,26 @@ bundle: video
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    weight: 102
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_image:
-    weight: 106
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: photoswipe_field_formatter
+    weight: 101
     region: content
+    label: hidden
+    settings:
+      photoswipe_node_style_first: ''
+      photoswipe_node_style: paragraph_gallery_4_photo_per_row
+      photoswipe_image_style: ''
+      photoswipe_reference_image_field: field_media_image
+      photoswipe_caption: title
+      photoswipe_caption_custom: ''
+      photoswipe_view_mode: default
+    third_party_settings: {  }
   field_meta_title:
     weight: 105
     label: above
@@ -43,8 +51,8 @@ content:
     type: metatag_empty_formatter
     region: content
   field_paragraphs:
-    weight: 102
-    label: above
+    weight: 104
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -64,14 +72,15 @@ content:
     label: above
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   previous_next: true

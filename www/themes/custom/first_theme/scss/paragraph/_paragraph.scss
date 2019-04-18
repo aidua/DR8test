@@ -3,6 +3,12 @@
   .field-rubrika {
     margin-bottom: 15px;
   }
+  .field-posada {
+    margin-bottom: 15px;
+  }
+  .field-viddil {
+    margin-bottom: 15px;
+  }
 }
 
 .paragraph {
@@ -12,6 +18,12 @@
 @media(max-width:767px){
   .node-posted__paragraphs {
     .field-rubrika {
+      margin-bottom: 10px;
+    }
+    .field-posada {
+      margin-bottom: 10x;
+    }
+    .field-viddil {
       margin-bottom: 10px;
     }
   }

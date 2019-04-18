@@ -26,15 +26,15 @@ content:
     region: content
   field_foto_info:
     type: entity_reference_revisions_entity_view
-    weight: 3
-    label: above
+    weight: 4
+    label: hidden
     settings:
       view_mode: preview
       link: ''
     third_party_settings: {  }
     region: content
   field_posada:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -42,13 +42,12 @@ content:
     type: string
     region: content
   field_viddil:
-    weight: 4
+    weight: 2
     label: above
     settings:
-      view_mode: default
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: entity_reference_label
     region: content
   links:
     weight: 0

@@ -2,14 +2,21 @@
 .views-view-personal {
   &__list {
     margin-bottom: 15px;
+
+    h3 {
+      margin-bottom: 25px;
+      text-align: center;
+    }
   }
   &__element {
+    text-align: center;
+
     a {
-      text-align: center;
 
       img {
         width: 100%;
         height: auto;
+        margin-bottom: 5px;
       }
       span {
         font-weight: bold;
