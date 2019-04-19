@@ -1,14 +1,12 @@
 {% extends "views-view-unformatted.html.twig" %}
 
 {% block rows_in_view %}
-    {% for row in rows %}
-        {%
-            set row_classes = [
-            default_row_class ? 'row views-row row_frontpage',
-        ]
-        %}
-        <div{{ row.attributes.addClass(row_classes) }}>
-            {{- row.content -}}
-        </div>
-    {% endfor %}
+  {% for row in rows %}
+    {% set row_classes = [
+      default_row_class ? 'row views-row row_frontpage',
+    ] %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{- row.content -}}
+    </div>
+  {% endfor %}
 {% endblock %}

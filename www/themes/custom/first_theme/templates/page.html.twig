@@ -1,36 +1,36 @@
 <div class="container maincontainer">
-    <div class="row header">
-        <div class="col-md-6 col-xs-24 header_left">
-            {{ page.header_left }}
-        </div>
-        <div class="col-md-12 hidden-xs header_center">
-            {{ page.header_center }}
-        </div>
-        <div class="col-md-6 col-xs-24 header_right">
-            {{ page.header_right }}
-        </div>
+  <div class="row header">
+    <div class="col-md-6 col-xs-24 header_left">
+      {{ page.header_left }}
     </div>
-    <div class="row body">
-        {% block content %}
-            {% if page.left_sidebar %}
-                <div class="col-md-5 left-sidebar">
-                    {{ page.left_sidebar }}
-                </div>
-            {% endif %}
-            <div class="col-md-{{ page.left_sidebar ? '19' : '24' }} content">
-                {{ page.content }}
-            </div>
-        {% endblock %}
+    <div class="col-md-12 hidden-xs header_center">
+      {{ page.header_center }}
     </div>
-    <div class="row footer">
-        <div class="col-md-6 col-xs-24 footer__left">
-            {{ page.footer_left }}
-        </div>
-        <div class="col-md-14 footer__center">
-            {{ page.footer_center }}
-        </div>
-        <div class="col-md-4 col-xs-24 footer__right">
-            {{ page.footer_right }}
-        </div>
+    <div class="col-md-6 col-xs-24 header_right">
+      {{ page.header_right }}
     </div>
+  </div>
+  <div class="row body">
+    {% block content %}
+      {% if page.left_sidebar %}
+        <div class="col-md-5 left-sidebar">
+          {{ page.left_sidebar }}
+        </div>
+      {% endif %}
+      <div class="col-md-{{ page.left_sidebar ? '19' : '24' }} content">
+        {{ page.content }}
+      </div>
+    {% endblock %}
+  </div>
+  <div class="row footer">
+    <div class="col-md-6 col-xs-24 footer__left">
+      {{ page.footer_left }}
+    </div>
+    <div class="col-md-14 footer__center">
+      {{ page.footer_center }}
+    </div>
+    <div class="col-md-4 col-xs-24 footer__right">
+      {{ page.footer_right }}
+    </div>
+  </div>
 </div>

@@ -1,51 +1,51 @@
 <div class="hidden-sm hidden-md hidden-lg">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar">
-                    <span class="sr-only">Навігація</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Меню</a>
-            </div>
-        </div><!-- /.container-fluid -->
-        <div class="collapse navbar-collapse" id="top-navbar">
-            <ul class="nav nav-pills nav-stacked" role="menu">
-            {% for item in items %}
-                <li {{ item.in_active_trail ? 'class="active"' : '' }}>
-                    {{ link(item.title, item.url) }}
-                </li>
-                    {% if item.is_expanded %}
-                        {% for subitem in item.below %}
-                            <li class="{{ subitem.in_active_trail ? 'active' : '' }} dropdown-submenu-mobile">
-                                {{ link(subitem.title, subitem.url) }}
-                            </li>
-                        {% endfor %}
-                    {% endif %}
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar">
+          <span class="sr-only">Навігація</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Меню</a>
+      </div>
+    </div><!-- /.container-fluid -->
+    <div class="collapse navbar-collapse" id="top-navbar">
+      <ul class="nav nav-pills nav-stacked" role="menu">
+        {% for item in items %}
+          <li {{ item.in_active_trail ? 'class="active"' : '' }}>
+            {{ link(item.title, item.url) }}
+          </li>
+          {% if item.is_expanded %}
+            {% for subitem in item.below %}
+              <li class="{{ subitem.in_active_trail ? 'active' : '' }} dropdown-submenu-mobile">
+                {{ link(subitem.title, subitem.url) }}
+              </li>
             {% endfor %}
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </nav>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
 </div>
 <div class="hidden-xs">
-    <ul class="nav nav-pills nav-stacked" role="menu">
-        {% for item in items %}
-            <li class="{{ item.in_active_trail ? 'active' : '' }} {{ item.is_expanded ? 'dropdown-submenu' : '' }}">
-                {{ link(item.title, item.url) }}
-                {% if item.is_expanded %}
-                    <ul class="dropdown-menu">
-                    {% for subitem in item.below %}
-                        <li {{ subitem.in_active_trail ? 'class="active"' : '' }}>
-                        {{ link(subitem.title, subitem.url) }}
-                        </li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
+  <ul class="nav nav-pills nav-stacked" role="menu">
+    {% for item in items %}
+      <li class="{{ item.in_active_trail ? 'active' : '' }} {{ item.is_expanded ? 'dropdown-submenu' : '' }}">
+        {{ link(item.title, item.url) }}
+        {% if item.is_expanded %}
+          <ul class="dropdown-menu">
+            {% for subitem in item.below %}
+              <li {{ subitem.in_active_trail ? 'class="active"' : '' }}>
+                {{ link(subitem.title, subitem.url) }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 
 {#{{ dump( item.below ) }}#}

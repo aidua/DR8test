@@ -1,39 +1,39 @@
-<div class="col-md-10 col-md-offset-1 col-xs-12 currencytbl">
-        {% if exchangedate %}
-            <h4 class="text-center">станом на {{ exchangedate ? exchangedate : 'сьогодні дані відсутні' }}</h4>
-        {% endif %}
-        {% if data %}
-            <div class="row">
-                <div class="col-md-1 text-center">
-                    <b>Код</b>
-                </div>
-                <div class="col-md-1 text-center">
-                    <b>Код</b>
-                </div>
-                <div class="col-md-8 text-center">
-                    <b>Валюта</b>
-                </div>
-                <div class="col-md-2 text-center">
-                    <b>Грн за 1</b>
-                </div>
-            </div>
-            {% for currency in data %}
-                <div class="row {{ cycle(['odd', 'even'], loop.index0) }}">
-                    <div class="col-md-1 text-center">
-                        {{ currency.r030 }}
-                    </div>
-                    <div class="col-md-1 text-center">
-                        {{ currency.cc }}
-                    </div>
-                    <div class="col-md-8">
-                        {{ currency.txt }}
-                    </div>
-                    <div class="col-md-2 text-center">
-                        {{ currency.rate|round(4, 'ceil') }}
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
+<div class="col-md-20 col-md-offset-2 col-xs-24 currencytbl">
+  {% if exchangedate %}
+    <h4 class="text-center">станом на {{ exchangedate ? exchangedate : 'сьогодні дані відсутні' }}</h4>
+  {% endif %}
+  {% if data %}
+    <div class="row">
+      <div class="col-md-2 text-center">
+        <b>Код</b>
+      </div>
+      <div class="col-md-2 text-center">
+        <b>Код</b>
+      </div>
+      <div class="col-md-16 text-center">
+        <b>Валюта</b>
+      </div>
+      <div class="col-md-4 text-center">
+        <b>Грн за 1</b>
+      </div>
+    </div>
+    {% for currency in data %}
+      <div class="row {{ cycle(['odd', 'even'], loop.index0) }}">
+        <div class="col-md-2 text-center">
+          {{ currency.r030 }}
+        </div>
+        <div class="col-md-2 text-center">
+          {{ currency.cc }}
+        </div>
+        <div class="col-md-16">
+          {{ currency.txt }}
+        </div>
+        <div class="col-md-4 text-center">
+          {{ currency.rate|round(4, 'ceil') }}
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
 
-        {{ kint() }}
+  {#{{ kint() }}#}
 </div>

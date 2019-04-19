@@ -7,49 +7,52 @@ use Drupal\Component\Serialization\Json;
  */
 function nbumodule_theme() {
 
-    $uri = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json";
-    //$uri = "http://drupal8.ua/exchange.json";
-    try {
-        $response = \Drupal::httpClient()->get($uri, array('headers' => array('Accept' => 'application/json')));
-        $nbu_data = (string) $response->getBody();
-        if (empty($nbu_data)) {
-            //return FALSE;
-            $nbu_data = NULL;
-            $nbu_exchangedate = NULL;
-        }else{
-            //return $nbu_data;
-            $nbu_data = Json::decode($nbu_data);
-            $nbu_exchangedate = $nbu_data[0]['exchangedate'];
-        }
+  $uri = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json";
+  //$uri = "http://drupal8.ua/exchange.json";
+  try {
+    $response = \Drupal::httpClient()
+      ->get($uri, ['headers' => ['Accept' => 'application/json']]);
+    $nbu_data = (string) $response->getBody();
+    if (empty($nbu_data)) {
+      //return FALSE;
+      $nbu_data = NULL;
+      $nbu_exchangedate = NULL;
     }
-    catch (Exception $e) {
-        //return FALSE;
-        $nbu_data = $e->getMessage();
-    };
+    else {
+      //return $nbu_data;
+      $nbu_data = Json::decode($nbu_data);
+      $nbu_exchangedate = $nbu_data[0]['exchangedate'];
+    }
+  } catch (Exception $e) {
+    //return FALSE;
+    $nbu_data = $e->getMessage();
+  };
 
-    return [
-        'nbumodule_template' => [  // Назва теми
-            'variables' => [ // Масив назви змінних
-                'data' => $nbu_data,
-                'exchangedate' => $nbu_exchangedate,
-            ],
-            'template' => 'nbumodule_template', // Шлях до шаблону без .html.twig, в якому і будуть доступні змінні, що вказані вище
-        ],
-    ];
+  return [
+    'nbumodule_template' => [  // Назва теми
+      'variables' => [ // Масив назви змінних
+        'data' => $nbu_data,
+        'exchangedate' => $nbu_exchangedate,
+      ],
+      'template' => 'nbumodule_template',
+      // Шлях до шаблону без .html.twig, в якому і будуть доступні змінні, що вказані вище
+    ],
+  ];
 }
 
 function get_nbu_currency() {
-    $uri = "/exchange.json";
-    try {
-        $response = \Drupal::httpClient()->get($uri, array('headers' => array('Accept' => 'application/json')));
-        $nbu_data = (string) $response->getBody();
-        if (empty($nbu_data)) {
-            return FALSE;
-        }else{
-            return $nbu_data;
-        }
+  $uri = "/exchange.json";
+  try {
+    $response = \Drupal::httpClient()
+      ->get($uri, ['headers' => ['Accept' => 'application/json']]);
+    $nbu_data = (string) $response->getBody();
+    if (empty($nbu_data)) {
+      return FALSE;
     }
-    catch (RequestException $e) {
-        return FALSE;
+    else {
+      return $nbu_data;
     }
+  } catch (RequestException $e) {
+    return FALSE;
+  }
 }

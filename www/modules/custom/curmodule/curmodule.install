@@ -9,85 +9,85 @@
  * Implements hook_schema().
  */
 function curmodule_schema() {
-    $schema['nbu_table_info'] = [
-        'description' => 'Table for currencies from NBU.',
-        'fields' => [
-            'id' => [
-                'description' => 'ID',
-                'type' => 'serial',
-                'unsigned' => TRUE,
-                'not null' => TRUE,
-            ],
-            'kod1' => [
-                'description' => 'Kod digits',
-                'type' => 'int',
-                'length' => 'SMALL',
-                'unsigned' => TRUE,
-                'not null' => TRUE,
-                'default' => 0,
-            ],
-            'kod2' => [
-                'description' => 'Kod letters',
-                'type' => 'char',
-                'length' => 3,
-                'not null' => TRUE,
-                'default' => '',
-            ],
-            'name' => [
-                'description' => 'Currency name',
-                'type' => 'varchar',
-                'length' => 255,
-                'not null' => TRUE,
-                'default' => '',
-            ],
-            'active' => [
-                'description' => 'Active - 0/1',
-                'type' => 'int',
-                'length' => 'TINY',
-                'unsigned' => TRUE,
-                'not null' => TRUE,
-                'default' => 1,
-            ],
-        ],
-        'primary key' => ['id'],
-    ];
+  $schema['nbu_table_info'] = [
+    'description' => 'Table for currencies from NBU.',
+    'fields' => [
+      'id' => [
+        'description' => 'ID',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'kod1' => [
+        'description' => 'Kod digits',
+        'type' => 'int',
+        'length' => 'SMALL',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'kod2' => [
+        'description' => 'Kod letters',
+        'type' => 'char',
+        'length' => 3,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'name' => [
+        'description' => 'Currency name',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'active' => [
+        'description' => 'Active - 0/1',
+        'type' => 'int',
+        'length' => 'TINY',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 1,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
 
-    $schema['nbu_table_data'] = [
-        'description' => 'Table for exchange rate for currencies NBU.',
-        'fields' => [
-            'id' => [
-                'description' => 'ID',
-                'type' => 'serial',
-                'unsigned' => TRUE,
-                'not null' => TRUE,
-            ],
-            'id_inf' => [
-                'description' => 'Kod in nbu_table_info',
-                'type' => 'int',
-                'length' => 'SMALL',
-                'unsigned' => TRUE,
-                'not null' => TRUE,
-                'default' => 0,
-            ],
-            'exchange' => [
-                'description' => 'Exchange rate',
-                'type' => 'numeric',
-                'precision' => 12,
-                'scale' => 7,
-                'not null' => TRUE,
-                'default' => 0,
-            ],
-            'date' => [
-                'description' => 'Date',
-                'type' => 'varchar',
-                'length' => 10,
-                'not null' => TRUE,
-                'default' => '',
-            ],
-        ],
-        'primary key' => ['id'],
-    ];
-    return $schema;
+  $schema['nbu_table_data'] = [
+    'description' => 'Table for exchange rate for currencies NBU.',
+    'fields' => [
+      'id' => [
+        'description' => 'ID',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'id_inf' => [
+        'description' => 'Kod in nbu_table_info',
+        'type' => 'int',
+        'length' => 'SMALL',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'exchange' => [
+        'description' => 'Exchange rate',
+        'type' => 'numeric',
+        'precision' => 12,
+        'scale' => 7,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'date' => [
+        'description' => 'Date',
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
 
 }
 
@@ -95,7 +95,7 @@ function curmodule_schema() {
  * Implements hook_uninstall().
  */
 function curmodule_uninstall() {
-    # Remove tables
-    \Drupal::state()->delete('curmodule.nbu_table_info');
-    \Drupal::state()->delete('curmodule.nbu_table_data');
+  # Remove tables
+  \Drupal::state()->delete('curmodule.nbu_table_info');
+  \Drupal::state()->delete('curmodule.nbu_table_data');
 }
